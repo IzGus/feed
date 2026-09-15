@@ -1,8 +1,8 @@
-YML-фид магазина «Электромонтажник» для Яндекс Директа.
+YML-фиды магазина «Электромонтажник» для Яндекса.
 
-Файл: elektromontazhnik_direct.yml
-Публичная ссылка (GitHub Pages): https://izgus.github.io/feed/elektromontazhnik_direct.yml
+- elektromontazhnik_direct.yml — Яндекс Директ (ЕПК): https://izgus.github.io/feed/elektromontazhnik_direct.yml
+- elektromontazhnik_tovary.yml — Яндекс Товары / Вебмастер: https://izgus.github.io/feed/elektromontazhnik_tovary.yml
 
-Файл собирается скриптом scripts/direct_feed.py в проекте D:\Montazhnik и
-публикуется командой:
+Файлы собираются скриптом scripts/direct_feed.py в проекте D:\Montazhnik и публикуются командой:
+
     PYTHONIOENCODING=utf-8 python scripts/direct_feed.py --check-urls --publish
