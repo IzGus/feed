@@ -1,0 +1,1382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2026-09-15T05:19:24+03:00">
+	<shop>
+		<name>Электромонтажник</name>
+		<company>Генераторы и ИБП</company>
+		<url>https://elektromontazhnik64.ru</url>
+		<platform>Tilda Publishing</platform>
+		<version>1.0</version>
+		<currencies>
+			<currency id="RUR" rate="1"/>
+		</currencies>
+		<categories>
+			<category id="286678031193">Генераторы и резервное питание</category>
+			<category id="780518169663" parentId="286678031193">Инверторные бензогенераторы</category>
+			<category id="141015326003" parentId="286678031193">Бензиновые генераторы</category>
+			<category id="594805333963" parentId="286678031193">Газовые и гибридные генераторы</category>
+			<category id="259723601923" parentId="286678031193">Источники бесперебойного питания</category>
+		</categories>
+		<offers>
+		<offer id="587626563683" available="true">
+			<name>Бензогенератор инверторный ТСС SGG 1400Si</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>060024</vendorCode>
+			<description>
+<![CDATA[
+Инверторный бензогенератор ТСС SGG 1400Si с номинальной мощностью 1,2 кВт предназначен для питания чувствительной электроники на выездных работах, даче или в кемпинге.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor6135-6139-4161-b766-623233336133/7c822da48dc442cb4a2c0b89a77b824d.webp</picture>
+			<picture>https://static.tildacdn.com/stor3864-6164-4363-b563-656534636430/78ca49f26854196cb8c17319f51e8cba.webp</picture>
+			<picture>https://static.tildacdn.com/stor3161-3666-4361-a435-613464613166/479e3edbd14898e596d74a3b92d62e97.webp</picture>
+			<picture>https://static.tildacdn.com/stor3865-3834-4131-a531-626533633734/afd9f1d19f7fa0ae5b51258c0e5c09c1.webp</picture>
+			<picture>https://static.tildacdn.com/stor3863-6531-4137-a139-383531363530/b60c8c4360c73ce01cc28e4ca6e7f272.webp</picture>
+			<picture>https://static.tildacdn.com/stor3134-3933-4033-b863-343764623835/3ae5155e5b747085a2014116ca6c6d06.webp</picture>
+			<picture>https://static.tildacdn.com/stor3730-3862-4836-b433-613363633462/b941c2fcaaa54c6fbcd2e5b1409c8687.webp</picture>
+			<picture>https://static.tildacdn.com/stor3963-3337-4933-b866-623064306562/158f1a0fc30715a97924962a45a66469.webp</picture>
+			<picture>https://static.tildacdn.com/stor3534-3739-4661-b432-316434653536/abaeef23c7341ca6e92fbecbffe7ccef.webp</picture>
+			<picture>https://static.tildacdn.com/stor6538-3433-4132-b734-326262633737/2166a0535ebc5d646adab498a0cc5d54.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-587626563683-benzogenerator-invertornii-tss-sgg-1400s</url>
+			<price>28836.00</price>
+			<oldprice>32040.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>780518169663</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">1.2 кВт</param>
+			<param name="Мощность максимальная">1.4 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый SH60B с альтернатором для SGG 1400Si / Engine Assembly for SGG 1400Si (20260-05568-31)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">2 л</param>
+			<param name="Тип запуска">ручной</param>
+			<param name="Исполнение">В кожухе</param>
+			<param name="Уровень шума">56 дБ</param>
+			<param name="Масса">13 кг</param>
+			<param name="Габариты">420х255х420 мм</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="283465663003" available="true">
+			<name>Бензогенератор инверторный ТСС SGG 2100Si</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>260023</vendorCode>
+			<description>
+<![CDATA[
+Бензогенератор инверторный SGG 2100Si – это портативный источник электроэнергии, объединяющий в себе передовые технологии и компактный дизайн, предназначенный для обеспечения надежного электропитания в самых разнообразных ситуациях. От загородных поездок и кемпинга до аварийного электроснабжения дома или использования на строительных площадках, этот генератор станет незаменимым помощником.<br /><br />
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3637-6466-4063-a662-363831383732/be7516a3eaf5693f332b031ce8a73a68.webp</picture>
+			<picture>https://static.tildacdn.com/stor3065-6637-4566-b135-636162303639/9b926955e645cd4056855c38b1199e97.webp</picture>
+			<picture>https://static.tildacdn.com/stor3232-3032-4961-b136-636235306164/e08b00f757711fa93bfa1eadcbf041cb.webp</picture>
+			<picture>https://static.tildacdn.com/stor3436-3637-4263-b832-333762363138/534fb09b50a7f3f81d7d5031a83eb830.webp</picture>
+			<picture>https://static.tildacdn.com/stor6365-3336-4139-a339-626331343635/e9eaf53f8177587460c2fef5e2c0f112.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-283465663003-benzogenerator-invertornii-tss-sgg-2100s</url>
+			<price>34493.00</price>
+			<oldprice>38325.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>780518169663</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">1.8 кВт</param>
+			<param name="Мощность максимальная">2.1 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый KM148F с альтернатором для SGG 1800Si / Engine Assembly for SGG 1800Si (01.05.KM148F-000-02)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">5.6 л</param>
+			<param name="Тип запуска">ручной</param>
+			<param name="Исполнение">В кожухе</param>
+			<param name="Уровень шума">56 дБ</param>
+			<param name="Масса">20 кг</param>
+			<param name="Габариты">498х307х460 мм</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="192159680893" available="true">
+			<name>Бензогенератор ТСС SGG 2000N</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>059999</vendorCode>
+			<description>
+<![CDATA[
+Однофазный бензиновый генератор TSS SGG 2000N совершенно незаменим для множества ситуаций, где требуется недорогой, мобильный, неприхотливый и простой в эксплуатации источник независимого электроснабжения. Бензогенератор может применяться на даче, в гараже, для уличной торговли или летнего кафе, а также, при выездах в автопутешествия с палатками или на рыбалку.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3264-6235-4336-b264-306536343662/c7ddb8c40c8fb34e4426e26f71e06c3e.webp</picture>
+			<picture>https://static.tildacdn.com/stor6165-3338-4364-a637-373661636132/e141a13aca07260641b03dfad5e0641d.webp</picture>
+			<picture>https://static.tildacdn.com/stor3366-6661-4863-b961-656639343036/3fd271b4357916864f2d945cad037050.webp</picture>
+			<picture>https://static.tildacdn.com/stor6335-3433-4135-a239-383864363531/51ed5e8624ecc28b44f8f818c1e7ec5c.webp</picture>
+			<picture>https://static.tildacdn.com/stor6230-6134-4430-b835-386139383262/e153d34b388a8415b2e4ed2c588e20a3.webp</picture>
+			<picture>https://static.tildacdn.com/stor3738-3866-4938-b365-353434353334/ae6837daad5531eae86f34447e57dfc8.webp</picture>
+			<picture>https://static.tildacdn.com/stor3566-3261-4363-a163-323533623332/582553c7ab262cdff7377f1d812a4d53.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-192159680893-benzogenerator-tss-sgg-2000n</url>
+			<price>17631.00</price>
+			<oldprice>19590.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>141015326003</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">2 кВт</param>
+			<param name="Мощность максимальная">2.2 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый TSS KM 170FD (C-тип, вал конус L-56 mm) (SGG2800EN/2000)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">15 л</param>
+			<param name="Тип запуска">ручной</param>
+			<param name="Исполнение">Открытое</param>
+			<param name="Уровень шума">66 дБ</param>
+			<param name="Масса">38.2 кг</param>
+			<param name="Габариты">590х425х440 мм</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="829948654693" available="true">
+			<name>Бензогенератор инверторный ТСС SGG 2400Si</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>060028</vendorCode>
+			<description>
+<![CDATA[
+Бензогенератор инверторный SGG 2400Si в шумопоглащающем кожухе, мощностью до 2,0 кВт. Переносной компактный, предназначен для питания маломощных электроприборов на загородном участке, в походе, на рыбалке.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor6266-6139-4037-a136-376131323966/3388d1630be37576bbb7ae815a4ed086.webp</picture>
+			<picture>https://static.tildacdn.com/stor6330-3739-4437-b036-316138336330/93e109afe7783e375d880b8ed73830e0.webp</picture>
+			<picture>https://static.tildacdn.com/stor3139-3136-4638-b534-376162656134/49f6701648991595b22fbd778eb672f1.webp</picture>
+			<picture>https://static.tildacdn.com/stor3361-3336-4864-b061-663635313362/01df0ffb86d7251eeabbefe16f4408f1.webp</picture>
+			<picture>https://static.tildacdn.com/stor3838-6561-4662-a232-633138383461/84b57697505ecb270c839493a81a5a6b.webp</picture>
+			<picture>https://static.tildacdn.com/stor6532-3261-4738-a430-633630333363/d1eb65eddf0a72799f1f51b81e48680b.webp</picture>
+			<picture>https://static.tildacdn.com/stor6639-3666-4332-a261-363139336638/c3b2bc4185631836affd933f5ca06a52.webp</picture>
+			<picture>https://static.tildacdn.com/stor3630-3036-4461-b839-633565653935/1825be691e15d93f9c86193244424468.webp</picture>
+			<picture>https://static.tildacdn.com/stor3330-3735-4534-b231-313630666530/17c8624759e2e86cacba5548beb708c0.webp</picture>
+			<picture>https://static.tildacdn.com/stor3963-3339-4636-a135-633236386333/ae585f469b5df6bf63b8ddcbff5d0bba.webp</picture>
+			<picture>https://static.tildacdn.com/stor3432-3363-4134-b763-643137353733/8be3aa42049b9948b30f70382918b9e9.webp</picture>
+			<picture>https://static.tildacdn.com/stor6464-3235-4265-b634-663232373638/eb634e991c7da0761fcec384c3ab9752.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-829948654693-benzogenerator-invertornii-tss-sgg-2400s</url>
+			<price>36990.00</price>
+			<oldprice>41100.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>780518169663</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">2 кВт</param>
+			<param name="Мощность максимальная">2.4 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый KM152 с альтернатором для SGG 2400Si / Engine Assembly for SGG 2400Si (01.05.KM152F-000-00)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">5.6 л</param>
+			<param name="Тип запуска">ручной</param>
+			<param name="Исполнение">В кожухе</param>
+			<param name="Уровень шума">56 дБ</param>
+			<param name="Масса">20 кг</param>
+			<param name="Габариты">498х307х460 мм</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="684206118063" available="true">
+			<name>Бензогенератор ТСС SGG 2800N</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>060005</vendorCode>
+			<description>
+<![CDATA[
+Бензиновый генератор TSS SGG 2800N предназначен для выработки электроэнергии с основными характеристиками: напряжение - 220 вольт, частота 50 Гц и номинальной мощностью 2.8 кВт. Для удобства передвижения можно дополнительно укомплектовать колесным комплектом и ручками (артикул 029623).
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor6462-6664-4239-b234-353866346166/dd85b125e52f2dc70c1165f80316713f.webp</picture>
+			<picture>https://static.tildacdn.com/stor3430-6233-4561-b737-643838343264/0711dd74093f39ca81786425503a92a7.webp</picture>
+			<picture>https://static.tildacdn.com/stor3064-6538-4237-b966-353132636163/f02ec203ae505159bc09bfb29c211fb2.webp</picture>
+			<picture>https://static.tildacdn.com/stor3932-3230-4730-b830-333263373130/2bff2590c8eda6006e0a0d523136ab5e.webp</picture>
+			<picture>https://static.tildacdn.com/stor3036-3561-4335-b936-383230386461/8fa43373d8154ced0351f0833b3b280f.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-684206118063-benzogenerator-tss-sgg-2800n</url>
+			<price>19170.00</price>
+			<oldprice>21300.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>141015326003</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">2.8 кВт</param>
+			<param name="Мощность максимальная">3 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый TSS KM 170FD (C-тип, вал конус L-56 mm) (SGG2800EN/2000)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">15 л</param>
+			<param name="Тип запуска">ручной</param>
+			<param name="Исполнение">Открытое</param>
+			<param name="Уровень шума">66 дБ</param>
+			<param name="Масса">45 кг</param>
+			<param name="Габариты">590х425х440 мм</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="886346287983" available="true">
+			<name>Бензогенератор ТСС SGG 2800EN</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>060004</vendorCode>
+			<description>
+<![CDATA[
+Бензогенератор с с электростартом TSS SGG 2800EN предназначен для выработки электроэнергии с основными характеристиками: напряжение - 220 вольт, частота 50 Гц и номинальной мощностью 2.8 кВт. Для удобства передвижения можно дополнительно укомплектовать колесным комплектом и ручками (029623).
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3564-6532-4464-a164-363233303761/27e8d0383a7e96ce3bf70ee3e2c9f172.webp</picture>
+			<picture>https://static.tildacdn.com/stor6136-3262-4065-b166-313439303162/8178b38852c9ed49bce462bcc83cbc86.webp</picture>
+			<picture>https://static.tildacdn.com/stor3339-3438-4739-a239-376461633562/2af4f6408abe2b1b2e774ea4637c4665.webp</picture>
+			<picture>https://static.tildacdn.com/stor6235-3235-4863-b533-626464333865/449927cc0319b2073092f22c59d8c786.webp</picture>
+			<picture>https://static.tildacdn.com/stor3834-6137-4339-a534-656633393937/850ee870d9289eb4325d5ba0c02bac1c.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-886346287983-benzogenerator-tss-sgg-2800en</url>
+			<price>20241.00</price>
+			<oldprice>22490.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>141015326003</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">2.8 кВт</param>
+			<param name="Мощность максимальная">3 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый TSS KM 170FD (C-тип, вал конус L-56 mm) (SGG2800EN/2000)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">15 л</param>
+			<param name="Тип запуска">ручной/электростартер</param>
+			<param name="Исполнение">Открытое</param>
+			<param name="Уровень шума">66 дБ</param>
+			<param name="Масса">46.4 кг</param>
+			<param name="Габариты">590х425х440 мм</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="835109888723" available="true">
+			<name>Бензогенератор инверторный ТСС SGG 3000Si</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>060054</vendorCode>
+			<description>
+<![CDATA[
+Мощность и области применения <br /><br />Бензогенератор инверторный SGG 3000Si в шумопоглащающем кожухе, предназначен для подключения к нему потребителей тока общей максимальной мощностью до 3,0 кВт. Переносной компактный инверторный генератор предназначен для питания электроприборов на загородном участке, в походе, на рыбалке.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor6165-6631-4432-b334-363233313336/11fc0cad2e13669f5bd7562e84cf34a0.webp</picture>
+			<picture>https://static.tildacdn.com/stor3234-3662-4233-b831-303634393232/5313d55b875d8176768f8a863187b4f7.webp</picture>
+			<picture>https://static.tildacdn.com/stor3865-6661-4539-a565-616236666463/5f10d812d4b9b42d69361a71c97ad0f7.webp</picture>
+			<picture>https://static.tildacdn.com/stor3834-3436-4562-b734-623765643836/37d75236befa077289efaf34720dc0ba.webp</picture>
+			<picture>https://static.tildacdn.com/stor3164-3835-4330-b733-366466383834/e7e8e26f3b2f1ec05c194df127d96b33.webp</picture>
+			<picture>https://static.tildacdn.com/stor3431-6438-4938-b964-616335333766/e3b007e0e29014bf1dec14f3848de253.webp</picture>
+			<picture>https://static.tildacdn.com/stor3133-3834-4237-b966-346238346434/b0cf03cf20bec878589c19aaf8f491be.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-835109888723-benzogenerator-invertornii-tss-sgg-3000s</url>
+			<price>45023.00</price>
+			<oldprice>50025.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>780518169663</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">2.8 кВт</param>
+			<param name="Мощность максимальная">3 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый KM165F с альтернатором для SGG 3000Si / Engine Assembly for SGG 3000Si (01.05.KM165F-101-00)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">5.6 л</param>
+			<param name="Тип запуска">ручной</param>
+			<param name="Исполнение">В кожухе</param>
+			<param name="Уровень шума">58 дБ</param>
+			<param name="Масса">21 кг</param>
+			<param name="Габариты">480х300х460 мм</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="733588524733" available="true">
+			<name>Бензогенератор инверторный ТСС SGG 3000ESi (Запуск с кнопки)</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>060058</vendorCode>
+			<description>
+<![CDATA[
+Бензогенератор инверторный SGG 3000ESi в шумопоглащающем кожухе, с электростартом, предназначен для подключения к нему потребителей тока общей номинальной мощностью 2,8 кВт. Переносной компактный инверторный генератор предназначен для питания электроприборов, на загородном участке, в походе, на рыбалке.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3236-3034-4431-a531-643063376230/6cba92c48518d381a0571939a129128a.webp</picture>
+			<picture>https://static.tildacdn.com/stor3464-6262-4962-a664-666462333437/da41e0b00600a2f8ed20d1d82c7c8b7a.webp</picture>
+			<picture>https://static.tildacdn.com/stor6430-6266-4661-b935-616466306337/4545b222ecca80e95ada4300f855b8a4.webp</picture>
+			<picture>https://static.tildacdn.com/stor6462-3038-4164-b139-316163653137/35fb393b9d5cf2ef9dc6898162e4cbb1.webp</picture>
+			<picture>https://static.tildacdn.com/stor6261-6133-4236-b431-666538363166/4ce0e1ecb4b06f34b11c4c1f8cbd7627.webp</picture>
+			<picture>https://static.tildacdn.com/stor3238-6166-4666-b163-303562376437/377f61b7f44266124825bf69f28497ee.webp</picture>
+			<picture>https://static.tildacdn.com/stor3037-3930-4163-b836-656138633362/e07944c8cb291817ec3dc7e36af8e092.webp</picture>
+			<picture>https://static.tildacdn.com/stor6466-6530-4630-b462-383333663764/06fc2359689e1f0d544b0bce72090d19.webp</picture>
+			<picture>https://static.tildacdn.com/stor6436-6436-4330-b833-653061393565/df4854f00d75804e6d3ac76978d09b52.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-733588524733-benzogenerator-invertornii-tss-sgg-3000e</url>
+			<price>53865.00</price>
+			<oldprice>59850.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>780518169663</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">2.8 кВт</param>
+			<param name="Мощность максимальная">3 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый KM165FD с альтернатором для SGG 3000ESi / Engine Assembly for SGG 3000ESi (01.05.KM165FD-101-00)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">5.6 л</param>
+			<param name="Тип запуска">ручной/электростартер</param>
+			<param name="Исполнение">В кожухе</param>
+			<param name="Уровень шума">59 дБ</param>
+			<param name="Масса">24.55 кг</param>
+			<param name="Габариты">490х300х460 мм</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="770814014693" available="true">
+			<name>Бензогенератор ТСС SGG 3200EN Duplex</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>060019</vendorCode>
+			<description>
+<![CDATA[
+Бензиновый генератор с электростартом TSS SGG 3200EN Duplex при номинальной мощности равной 3,2 кВ, обеспечивает кратковременную пусковую мощность до 9 кВт (имеются в виду только пусковые токи высоконагруженных потребителей). Генератор DUPLEX вытягивает самых тяжелых индуктивных потребителей, это его отличительная особенность. Предназначен для выработки электроэнергии с основными характеристиками: напряжение - 220 вольт, частота 50 Гц.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3438-6666-4862-a336-393564393466/119cccfa9abb4ee988e18142adcf626c.webp</picture>
+			<picture>https://static.tildacdn.com/stor6232-3461-4635-b937-393963346539/8079472a4e3cea2f297fe52e279be35e.webp</picture>
+			<picture>https://static.tildacdn.com/stor6663-3339-4264-b066-643661353665/e329631eeffc1c108d44ce7a37d9b58a.webp</picture>
+			<picture>https://static.tildacdn.com/stor3034-6561-4562-b839-636463303638/759bad7705b312ecd235af6b834b3ce3.webp</picture>
+			<picture>https://static.tildacdn.com/stor3037-3933-4865-b734-623333303963/e2ddee8c7791ee6f840e08aa6fe2b8fe.webp</picture>
+			<picture>https://static.tildacdn.com/stor3537-6162-4132-b930-663133653064/2eb743afe7ad0a947640fbfe00368a6b.webp</picture>
+			<picture>https://static.tildacdn.com/stor3061-6233-4666-b035-616539643730/3cf95724194d56e4b4e23084d7535c25.webp</picture>
+			<picture>https://static.tildacdn.com/stor6439-6431-4563-b331-396161626262/8010e0a458441f2da07d85c5403318ef.webp</picture>
+			<picture>https://static.tildacdn.com/stor3362-3037-4562-a131-636138336339/389d51051d2ede803265e4f3481f9533.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-770814014693-benzogenerator-tss-sgg-3200en-duplex</url>
+			<price>40905.00</price>
+			<oldprice>45450.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>141015326003</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">3 кВт</param>
+			<param name="Мощность максимальная">3.5 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый TSS KM170FP/223CC SGG 3200EN Duplex (01.05.TSS170FPD-101-H2KA)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">15 л</param>
+			<param name="Тип запуска">ручной/электростартер</param>
+			<param name="Исполнение">Открытое</param>
+			<param name="Уровень шума">66 дБ</param>
+			<param name="Масса">45.55 кг</param>
+			<param name="Габариты">590х420х400 мм</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="619269039813" available="true">
+			<name>Бензогенератор инверторный ТСС SGG 3800Ei</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>060046</vendorCode>
+			<description>
+<![CDATA[
+Бензогенератор инверторный SGG 3800Ei предназначен для подключения к нему потребителей тока общей номинальной мощностью 3,6 кВт. Компактный инверторный генератор предназначен для питания маломощных электроприборов на загородном участке, в походе, на рыбалке. Выход 12 вольт позволяет подзарядить автомобильный аккумулятор в экстренном случае.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor6632-3735-4331-a233-336538613961/c66b21f0ff71fd9fefd42b7f01dca2b8.webp</picture>
+			<picture>https://static.tildacdn.com/stor3237-3834-4037-b836-376162643630/bfd75274d062686c5451567fe6e06aec.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-619269039813-benzogenerator-invertornii-tss-sgg-3800e</url>
+			<price>47520.00</price>
+			<oldprice>52800.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>780518169663</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">3 кВт</param>
+			<param name="Мощность максимальная">3.8 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый KM170F (SGG 3800Ei) с альтернатором / Engine Assembly (01.05.KM170FPID-101-Y4QA-1)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">15 л</param>
+			<param name="Тип запуска">ручной/электростартер</param>
+			<param name="Исполнение">Открытое</param>
+			<param name="Уровень шума">74 дБ</param>
+			<param name="Масса">35.2 кг</param>
+			<param name="Габариты">505х420х500 мм</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="880103751723" available="true">
+			<name>Бензогенератор инверторный ТСС SGG 4200Ei</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>060048</vendorCode>
+			<description>
+<![CDATA[
+Бензогенератор инверторный SGG 4200Ei с электростартом и разъемом для подключения блока автоматики, вырабатывает электричество с высокой точностью частоты и напряжения. Предназначен для подключения к нему потребителей общей номинальной мощностью до 4,2 кВт. Позволяет подключать к генератору как обычных потребителей, так и точное электронное оборудование, например, ноутбуки, LCD-телевизоры или смартфон.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor6264-6563-4238-a530-346538643537/75c0e2fa4a82f544a6925eaf89f60247.webp</picture>
+			<picture>https://static.tildacdn.com/stor3430-3162-4634-b363-303063376561/7ed01076fb4ae06434280107830e5053.webp</picture>
+			<picture>https://static.tildacdn.com/stor3065-3764-4437-b135-643731346435/2344b97498d9f0b91d611ad033cf4459.webp</picture>
+			<picture>https://static.tildacdn.com/stor3537-3462-4461-a664-396465313632/101664ce45a946ba243bbab00cb38e94.webp</picture>
+			<picture>https://static.tildacdn.com/stor3134-6635-4766-b766-343339366363/8f5631c9e0524562417610f378af16f0.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-880103751723-benzogenerator-invertornii-tss-sgg-4200e</url>
+			<price>57915.00</price>
+			<oldprice>64350.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>780518169663</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">4 кВт</param>
+			<param name="Мощность максимальная">4.8 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый KM172F (SGG 4200Ei) / Engine KM172Fi (01.05.KM172FID-103-H2QA-5)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">15 л</param>
+			<param name="Тип запуска">ручной/электростартер</param>
+			<param name="Исполнение">Открытое</param>
+			<param name="Уровень шума">74 дБ</param>
+			<param name="Масса">38.1 кг</param>
+			<param name="Габариты">495х425х490 мм</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="728364071533" available="true">
+			<name>Бензогенератор инверторный ТСС SGG 4500ESi</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>160049</vendorCode>
+			<description>
+<![CDATA[
+Бензогенератор инверторный SGG 4500ESi в шумопоглащающем кожухе предназначен для подключения к нему потребителей тока общей максимальной мощностью до 4,5 кВт. Переносной компактный инверторный генератор предназначен для питания маломощных электроприборов на загородном участке, в походе, на рыбалке.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor6435-3035-4734-a139-643265653233/5e503f686a49fe58ac6482267e55ead2.webp</picture>
+			<picture>https://static.tildacdn.com/stor6236-6161-4839-a266-623531643631/a5a184d895f244b4341c9db215f664e9.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-728364071533-benzogenerator-invertornii-tss-sgg-4500e</url>
+			<price>74952.00</price>
+			<oldprice>83280.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>780518169663</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">4 кВт</param>
+			<param name="Мощность максимальная">4.5 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">1-цилиндровый, 4-х тактный с воздушным охлаждением</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">10 л</param>
+			<param name="Тип запуска">ручной</param>
+			<param name="Исполнение">В кожухе</param>
+			<param name="Уровень шума">76 дБ</param>
+			<param name="Масса">42 кг</param>
+			<param name="Габариты">630×470x545 мм</param>
+			<param name="Гарантия">12</param>
+		</offer>
+		<offer id="759593092613" available="true">
+			<name>Бензогенератор 5 кВт ТСС SGG 5000EHNA</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>160008</vendorCode>
+			<description>
+<![CDATA[
+Бензогенератор с электростартом и с разъемом для подключения блока автоматики. TSS SGG 5000ENA предназначен для выработки электроэнергии с основными характеристиками: напряжение - 220 вольт, частота 50 Гц и номинальной мощностью 5 кВт.<br /><br />Бензогенератор может применяться на даче, в гараже, строительстве, для уличной торговли или летнего кафе, а также, при выездах в автопутешествия с палатками или на рыбалку. Электрогенератор бензиновый работает на бензине АИ-92. Рекомендуемое к эксплуатации масло SAE 10W30.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3533-6130-4564-b736-653761626562/7c37c1229f14105f56644e6a493845bf.webp</picture>
+			<picture>https://static.tildacdn.com/stor3130-6536-4566-a135-326561616239/a27424896d54c7fbc72d2c9196991de0.webp</picture>
+			<picture>https://static.tildacdn.com/stor3434-3361-4637-b265-363733396135/cbf03c91f1e1ff3367476c0e0a5f80b5.webp</picture>
+			<picture>https://static.tildacdn.com/stor6236-3338-4435-a436-623439343332/da7cd8f978d2381cc762c7454355087f.webp</picture>
+			<picture>https://static.tildacdn.com/stor6261-3337-4361-b938-326561653031/97363de5552455e804d483a5eeb299bd.webp</picture>
+			<picture>https://static.tildacdn.com/stor3034-3035-4366-a338-396132353761/1352849a1c71d52b08fce8873e57beec.webp</picture>
+			<picture>https://static.tildacdn.com/stor6631-3538-4630-a433-656433633332/b2f9ca99f7eb00061ed1759fe9a586c1.webp</picture>
+			<picture>https://static.tildacdn.com/stor3832-3864-4963-a365-663233393738/c66d58d94aa1e1d99d31b63e36f167c2.webp</picture>
+			<picture>https://static.tildacdn.com/stor6631-3362-4163-a662-643134656430/984f99160ade521e8151a6993cc52b7e.webp</picture>
+			<picture>https://static.tildacdn.com/stor3363-6233-4562-a462-333337396164/6380c336e3c67048afad5e3cdf20412a.webp</picture>
+			<picture>https://static.tildacdn.com/stor3030-6635-4236-a630-373736393966/ea15fbc70de0b7997fe5ef7dbd850e3a.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-759593092613-benzogenerator-5-kvt-tss-sgg-5000ehna</url>
+			<price>64665.00</price>
+			<oldprice>71850.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>141015326003</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">5 кВт</param>
+			<param name="Мощность максимальная">5.5 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый KM190FD для SGG 5000EHNA-6000(..) (арт.станции 1600..) / Engine Assembly (01.05.TSS190FD-101-H25A-1)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">25 л</param>
+			<param name="Тип запуска">ручной/электростартер</param>
+			<param name="Исполнение">Открытое</param>
+			<param name="Уровень шума">78 дБ</param>
+			<param name="Масса">82.6 кг</param>
+			<param name="Габариты">730х640х650 с ручками и колесами</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="126853463623" available="true">
+			<name>Бензогенератор ТСС SGG 5000EHNA Duplex</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>260008</vendorCode>
+			<description>
+<![CDATA[
+Бензогенератор с электростартом и с разъемом для подключения блока автоматики. TSS SGG 5000ENA предназначен для выработки электроэнергии с основными характеристиками: напряжение - 220 вольт, частота 50 Гц и номинальной мощностью 5 кВт.<br /><br />Бензогенератор может применяться на даче, в гараже, строительстве, для уличной торговли или летнего кафе, а также, при выездах в автопутешествия с палатками или на рыбалку.<br /><br />Электрогенератор бензиновый работает на бензине АИ-92. Рекомендуемое к эксплуатации масло SAE 10W30.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor6263-3166-4432-b065-616530656235/a69cf6548cf02c112263d3a60d03e164.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-126853463623-benzogenerator-tss-sgg-5000ehna-duplex</url>
+			<price>64800.00</price>
+			<oldprice>72000.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>141015326003</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">5 кВт</param>
+			<param name="Мощность максимальная">5.5 кВт</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый KM190FD для SGG 5000EHNA-6000(..) (арт.станции 1600..) / Engine Assembly (01.05.TSS190FD-101-H25A-1)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">25 л</param>
+			<param name="Тип запуска">ручной/электростартер</param>
+			<param name="Исполнение">Открытое</param>
+			<param name="Уровень шума">78 дБ</param>
+			<param name="Масса">82.6 кг</param>
+			<param name="Габариты">730х640х650 с ручками и колесами</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="209727335383" available="true">
+			<name>Бензогенератор инверторный 5 кВт ТСС SGG 5000Ei</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>060040</vendorCode>
+			<description>
+<![CDATA[
+Бензогенератор инверторный SGG 2400Si в шумопоглащающем кожухе, предназначен для подключения к нему потребителей тока общей максимальной мощностью до 2,0 кВт.<br /><br />Переносной компактный инверторный генератор предназначен для питания маломощных электроприборов на загородном участке, в походе, на рыбалке.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3933-6139-4166-b565-383432616366/b25b45017a36c1dfe7fa0e100cdfd4a9.webp</picture>
+			<picture>https://static.tildacdn.com/stor3533-6264-4430-b230-353538636636/959475bff858abfab24f2eaf598cd814.webp</picture>
+			<picture>https://static.tildacdn.com/stor6562-3036-4064-b632-346333343839/31ba8ae82ad8500c34449a6fe0f885d3.webp</picture>
+			<picture>https://static.tildacdn.com/stor6336-3038-4233-b530-343062326333/716aef6855e67155a54872171c06384a.webp</picture>
+			<picture>https://static.tildacdn.com/stor3562-3037-4339-b530-303861373262/a24718ec674135c3a1413de83cbbce9e.webp</picture>
+			<picture>https://static.tildacdn.com/stor3435-3632-4333-a564-383964633639/146accfae9a2709d8743ca59164aac65.webp</picture>
+			<picture>https://static.tildacdn.com/stor6263-6661-4333-a665-653464373539/4b9cabc7beafb8ee6a515eb02df70590.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-209727335383-benzogenerator-invertornii-5-kvt-tss-sgg</url>
+			<price>66015.00</price>
+			<oldprice>73350.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>780518169663</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">5 кВт</param>
+			<param name="Мощность максимальная">5.5 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый KM172Fi для SGG 5000Ei с альтернатором / Engine KM172Fi (01.05.TSS172FDI-101-H2QA)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">15 л</param>
+			<param name="Тип запуска">ручной/электростартер</param>
+			<param name="Исполнение">Открытое</param>
+			<param name="Уровень шума">74 дБ</param>
+			<param name="Масса">42 кг</param>
+			<param name="Габариты">500х422х515 мм</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="517765336963" available="true">
+			<name>Бензогенератор инверторный 5 кВт ТСС SGG 5000ESi</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>060053</vendorCode>
+			<description>
+<![CDATA[
+Бензогенератор инверторный SGG 5000ESi в шумопоглащающем кожухе, с электростартом и разъемом для подключения блока автоматики, вырабатывает электричество высокой точности частоты и напряжения.<br /><br />Предназначен для подключения к нему потребителей общей номинальной мощностью до 5,0 кВт. Позволяет напрямую подключать к генератору как обычных потребителей, так и точное электронное оборудование, например, ноутбуки, LCD-телевизоры или смартфон.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3661-3539-4435-b432-313730343633/780433336e80e5ce77fab36819883875.webp</picture>
+			<picture>https://static.tildacdn.com/stor3836-3331-4934-b033-326435653933/17a9b5f375865cd4cccde04289740739.webp</picture>
+			<picture>https://static.tildacdn.com/stor6338-3137-4464-a131-336637366662/f3e0311d02ae4ebc5cf7805b182629b9.webp</picture>
+			<picture>https://static.tildacdn.com/stor3735-3431-4330-b531-323236653433/d7e422a89d51d9ff57da45725fe7a7d8.webp</picture>
+			<picture>https://static.tildacdn.com/stor3934-3830-4730-b464-376531366436/304461acdfc39e50d912a85f5eb971af.webp</picture>
+			<picture>https://static.tildacdn.com/stor3638-6639-4536-a163-363338386535/2ecfb671c52e473cab2fb6446fa30a48.webp</picture>
+			<picture>https://static.tildacdn.com/stor6438-6463-4733-a435-383464316435/cd31f4244b789f2694785eff8e7d3488.webp</picture>
+			<picture>https://static.tildacdn.com/stor6233-3164-4731-b262-306664613731/b98c251d2d4ca81d1982a829fad5c754.webp</picture>
+			<picture>https://static.tildacdn.com/stor3038-3863-4036-a635-393332356166/9816f8bec384b3968cbfba90857ca3be.webp</picture>
+			<picture>https://static.tildacdn.com/stor3866-3366-4633-b464-376663666539/836025197ab249c917d411bcecbe18c3.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-517765336963-benzogenerator-invertornii-5-kvt-tss-sgg</url>
+			<price>94770.00</price>
+			<oldprice>105300.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>780518169663</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">5 кВт</param>
+			<param name="Мощность максимальная">5.5 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый KM172Fi для SGG 5000ESi с альтернатором / Engine KM172Fi (01.05.KM172FDI-101-H2XA)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">10 л</param>
+			<param name="Тип запуска">ручной/электростартер</param>
+			<param name="Исполнение">В кожухе</param>
+			<param name="Уровень шума">58 дБ</param>
+			<param name="Масса">43.85 кг</param>
+			<param name="Габариты">610х440х520 мм</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="939808729253" available="true">
+			<name>Бензогенератор ТСС SGG 6000EHNA Duplex</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>160012</vendorCode>
+			<description>
+<![CDATA[
+Бензогенератор с электростартером и с разъемом для подключения блока автоматики. TSS SGG 6000ENA Duplex при номинальной мощности равной 6,0 кВт, обеспечивает кратковременную пусковую мощность до 15 кВт (имеются в виду только пусковые токи высоконагруженных потребителей).<br /><br />Генератор DUPLEX вытягивает самых тяжелых индуктивных потребителей, это его отличительная особенность, предназначен для выработки электроэнергии с основными характеристиками: напряжение - 220 вольт, частота 50 Гц и номинальной мощностью 6 кВт.<br /><br />Бензогенератор может применяться на даче, в гараже, строительстве, для уличной торговли или летнего кафе, а также, при выездах в автопутешествия с палатками или на рыбалку. Электрогенератор бензиновый работает на бензине АИ-92. Рекомендуемое к эксплуатации масло SAE 10W30.<br /><br />Однофазный бензиновый генератор ТСС совершенно незаменим для множества ситуаций, где требуется недорогой, мобильный, неприхотливый и простой в эксплуатации источник независимого электроснабжения.<br /><br />
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3865-3437-4965-b432-326636386435/57f745b4f8ff0e55aa63d7c390c049b4.webp</picture>
+			<picture>https://static.tildacdn.com/stor3938-3533-4434-a134-393737366630/5a8cb6e22fdea8069728f9632396370d.webp</picture>
+			<picture>https://static.tildacdn.com/stor3932-3432-4839-a131-393233616565/74271636ba4f6a63e861f010e1a6a1ae.webp</picture>
+			<picture>https://static.tildacdn.com/stor6431-6563-4334-b638-366463336566/661160dde8632a2640e068ccb6aee3e9.webp</picture>
+			<picture>https://static.tildacdn.com/stor6433-6663-4364-b862-326165343566/2b49f2302d890170c1382a1f1abd5857.webp</picture>
+			<picture>https://static.tildacdn.com/stor3933-3765-4632-a664-646539356665/503ae355cb879df3d5e772067d635ed8.webp</picture>
+			<picture>https://static.tildacdn.com/stor6332-6638-4539-b037-313935373732/305e4337fa4afd57557719e37f2a623f.webp</picture>
+			<picture>https://static.tildacdn.com/stor6363-6135-4362-b936-366561666262/17a723d084a5d8ca8be52b34abb77c13.webp</picture>
+			<picture>https://static.tildacdn.com/stor3436-6431-4438-b333-613830393561/a2a6a00b34a1a8db7c73b2870a025d6a.webp</picture>
+			<picture>https://static.tildacdn.com/stor3131-3335-4933-b236-353234306164/a37b042b010ff71e154a3cbfd75bd42f.webp</picture>
+			<picture>https://static.tildacdn.com/stor6238-6334-4632-b536-376430323464/baa467058817c5b28b1721513b818cd0.webp</picture>
+			<picture>https://static.tildacdn.com/stor6166-6361-4666-b166-353731383131/fa57f63a32a5309c87b5146fc1827ce3.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-939808729253-benzogenerator-tss-sgg-6000ehna-duplex</url>
+			<price>67230.00</price>
+			<oldprice>74700.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>141015326003</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">6 кВт</param>
+			<param name="Мощность максимальная">6.5 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый KM190FD для SGG 5000EHNA-6000(..) (арт.станции 1600..) / Engine Assembly (01.05.TSS190FD-101-H25A-1)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">25 л</param>
+			<param name="Тип запуска">ручной/электростартер</param>
+			<param name="Исполнение">Открытое</param>
+			<param name="Уровень шума">74 дБ</param>
+			<param name="Масса">85 кг</param>
+			<param name="Габариты">730х640х650 с ручками и колесами</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="490190651833" available="true">
+			<name>Гибридный генератор TSS DF 6500EHNA Duplex</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>260012</vendorCode>
+			<description>
+<![CDATA[
+Гибридный генератор SGG 6000EHNA Duplex - бензиновая модель с электростартером и с разъемом для подключения блока автоматики. Бензогенератор может применяться на даче, в гараже, строительстве, для уличной торговли или летнего кафе, а также, при выездах в автопутешествия с палатками или на рыбалку. Электрогенератор бензиновый работает на бензине АИ-92. Рекомендуемое к эксплуатации масло SAE 10W30.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3033-3638-4238-a262-616566346130/15f76faa282852566ab6a0a1b75fd79b.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-490190651833-gibridnii-generator-tss-df-6500ehna-dupl</url>
+			<price>70470.00</price>
+			<oldprice>78300.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>594805333963</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">6 кВт</param>
+			<param name="Мощность максимальная">6.5 кВт</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый KM190FD для SGG 5000EHNA-6000(..) (арт.станции 1600..) / Engine Assembly (01.05.TSS190FD-101-H25A-1)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">25 л</param>
+			<param name="Тип запуска">ручной/электростартер</param>
+			<param name="Исполнение">Открытое</param>
+			<param name="Уровень шума">74 дБ</param>
+			<param name="Масса">85 кг</param>
+			<param name="Габариты">730х640х650 с ручками и колесами</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="284483807633" available="true">
+			<name>Бензогенератор ТСС SGG 6000EH3NA</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>160011</vendorCode>
+			<description>
+<![CDATA[
+Трехфазный бензиновый генератор TSS SGG 6000E3NA с электростартером и разъемом для подключения блока автоматики, предназначен для выработки электроэнергии с основными характеристиками: напряжение 230-400 вольт, частота 50 Гц и номинальной мощностью 6 кВт.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3565-6461-4034-b364-316163303935/505bab1a8873bb039c355bd6f46853a3.webp</picture>
+			<picture>https://static.tildacdn.com/stor3866-3037-4565-a135-316366393137/b87c0ebdafad9340a2ba49251b87b177.webp</picture>
+			<picture>https://static.tildacdn.com/stor3364-6631-4562-a261-643234396536/e5411fa86784937ec8e19bc99b8ef2c1.webp</picture>
+			<picture>https://static.tildacdn.com/stor3564-6138-4366-a639-353135323933/2b903345f7523f792030875f7778eafe.webp</picture>
+			<picture>https://static.tildacdn.com/stor6538-6331-4130-a265-373232666165/9f31c2c9ec4850750f4da1f29508fc39.webp</picture>
+			<picture>https://static.tildacdn.com/stor6331-3064-4466-a538-383662346139/038707390d2656aa48a0b569d2966c73.webp</picture>
+			<picture>https://static.tildacdn.com/stor3761-6131-4061-b230-343136663332/d06371499ff387f89d1277a4c18122c3.webp</picture>
+			<picture>https://static.tildacdn.com/stor3661-3533-4236-a666-663234653161/7656e64e32fe2fb2368406564018f9c1.webp</picture>
+			<picture>https://static.tildacdn.com/stor3866-3237-4631-a138-353463623531/1391b4a3f021a593a558556119e64473.webp</picture>
+			<picture>https://static.tildacdn.com/stor3863-3033-4362-b864-636666353733/9592575cc259797aafd8a1e8293f87d8.webp</picture>
+			<picture>https://static.tildacdn.com/stor3537-6132-4931-a639-383464356164/73b01ba469a8e64aea26467e388e252c.webp</picture>
+			<picture>https://static.tildacdn.com/stor3037-3837-4232-b138-376462373464/28c6f270ef877d24ff3cc5f6ecc5e384.webp</picture>
+			<picture>https://static.tildacdn.com/stor3064-3930-4430-b266-653263373037/29b55f9701a1274b7a52384091d97018.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-284483807633-benzogenerator-tss-sgg-6000eh3na</url>
+			<price>82459.00</price>
+			<oldprice>91622.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>141015326003</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">6 кВт</param>
+			<param name="Мощность максимальная">6.5 кВт</param>
+			<param name="Напряжение">230/400 В</param>
+			<param name="Количество фаз">3</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый KM190FD для SGG 5000EHNA-6000(..) (арт.станции 1600..) / Engine Assembly (01.05.TSS190FD-101-H25A-1)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">25 л</param>
+			<param name="Тип запуска">ручной/электростартер</param>
+			<param name="Исполнение">Открытое</param>
+			<param name="Уровень шума">74 дБ</param>
+			<param name="Масса">86 кг</param>
+			<param name="Габариты">730х648х650 с ручками и колесами</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="463414271583" available="true">
+			<name>Бензогенератор инверторный ТСС SGG 6000Ei</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>060059</vendorCode>
+			<description>
+<![CDATA[
+Бензогенератор инверторный SGG 6000Ei с электростартом, коннекотором для подключения АВР, укомплектован колесным комплетом для удобства перемещения. Инверторный генератор считается оптимальным выбором для нагрузки, чувствительной к качеству тока — такой, как аудиотехника или телевизор.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3935-6139-4535-a164-353038633039/98b66afafbc900fb84c6d800ab2eca30.webp</picture>
+			<picture>https://static.tildacdn.com/stor6536-3435-4530-b530-396565616662/14d20669a4c4e670870094910039f67e.webp</picture>
+			<picture>https://static.tildacdn.com/stor6463-3263-4163-a639-316364363165/75db54662fd624663c6cd6c6fc6cd925.webp</picture>
+			<picture>https://static.tildacdn.com/stor3463-6362-4531-b535-383265623964/78e9fd6c3594aaee738388a68f96fa02.webp</picture>
+			<picture>https://static.tildacdn.com/stor3839-3337-4666-b238-393732346130/f3d2b8a5428216f94e5bec923a7a92e3.webp</picture>
+			<picture>https://static.tildacdn.com/stor3537-3730-4530-b834-343562663363/d243b491d59047797965c27b8867b3f2.webp</picture>
+			<picture>https://static.tildacdn.com/stor6336-3237-4065-b163-346463313864/511c2e99d306c93f4210e6df67bec51f.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-463414271583-benzogenerator-invertornii-tss-sgg-6000e</url>
+			<price>83468.00</price>
+			<oldprice>92743.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>780518169663</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">6 кВт</param>
+			<param name="Мощность максимальная">6.5 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый SV320B с альтернатором для SGG 6000Ei / Engine Assembly for SGG 6000Ei (20260-10545-00)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">18 л</param>
+			<param name="Тип запуска">ручной/электростартер</param>
+			<param name="Исполнение">Открытое</param>
+			<param name="Уровень шума">73 дБ</param>
+			<param name="Масса">50 кг</param>
+			<param name="Габариты">610х490х500 мм</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="840219257943" available="true">
+			<name>Бензогенератор инверторный ТСС SGG 6000ESi</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>060063</vendorCode>
+			<description>
+<![CDATA[
+Бензиновый генератор инверторный SGG 6000ESi однофазный с электростартером, 6 кВт, 230В – это современное и высокотехнологичное решение для обеспечения надежного электропитания в условиях отсутствия доступа к централизованной сети. Благодаря инверторной технологии, этот генератор обеспечивает стабильное и чистое электричество, идеально подходящее для питания чувствительной электроники, такой как компьютеры, ноутбуки и медицинское оборудование.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor6162-3938-4933-b066-343761383135/3c469956c65af01298dbf749c5f4b0c8.webp</picture>
+			<picture>https://static.tildacdn.com/stor3462-6430-4336-b634-386266336563/ef56e1c0f94ec717e7ab55d6d4759f47.webp</picture>
+			<picture>https://static.tildacdn.com/stor3833-3733-4737-b661-626463653139/052f14776a375da2cbe0a446648bdd62.webp</picture>
+			<picture>https://static.tildacdn.com/stor3339-3832-4030-b733-373765623435/d78dcc4cd63bfc7907bad3dfddb389e7.webp</picture>
+			<picture>https://static.tildacdn.com/stor3461-6265-4333-b139-366163656136/723f8226d2473599cd85ad6b79838492.webp</picture>
+			<picture>https://static.tildacdn.com/stor3262-3961-4036-b732-643936623434/edb56bb24efe7b7b8c01ed8dbe6f2861.webp</picture>
+			<picture>https://static.tildacdn.com/stor3365-3766-4237-b933-653466633162/331a527408fa14e4ff3631556f0516fa.webp</picture>
+			<picture>https://static.tildacdn.com/stor3263-6331-4033-b237-633861313235/35c3627eb4613301d9e6a6e48bc189a3.webp</picture>
+			<picture>https://static.tildacdn.com/stor3863-6632-4532-b830-333632393563/6890669d812c790ec9fd4966cdc102b2.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-840219257943-benzogenerator-invertornii-tss-sgg-6000e</url>
+			<price>119725.00</price>
+			<oldprice>133028.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>780518169663</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">6 кВт</param>
+			<param name="Мощность максимальная">6.5 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый SV320B с альтернатором для SGG 6000ESi / Engine Assembly for SGG 6000ESi (20260-11534-00)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">13.5 л</param>
+			<param name="Тип запуска">ручной/электростартер</param>
+			<param name="Исполнение">В кожухе</param>
+			<param name="Уровень шума">58 дБ</param>
+			<param name="Масса">57.5 кг</param>
+			<param name="Габариты">695*545*585 мм</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="910394681183" available="true">
+			<name>Бензогенератор инверторный ТСС SGG 7000Ei</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>060027</vendorCode>
+			<description>
+<![CDATA[
+Профессиональный инверторный бензиновый генератор TSS SGG 7000Ei, с электростартом и разъемом для подключения блока автоматики. Мощный инверторный генератор обеспечивает идеальное качество тока, дает возможность подключения напрямую электронных устройств, без стабилизатора.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor6338-6433-4166-a661-616534336339/0e0a470d328a4fb49959782588a6855c.webp</picture>
+			<picture>https://static.tildacdn.com/stor6233-6436-4930-b362-343662656364/63cd4b04489f39a4708b96978719d354.webp</picture>
+			<picture>https://static.tildacdn.com/stor6163-3865-4432-b531-376230316135/ec44abca2fc296ed8e6bea2c44948f78.webp</picture>
+			<picture>https://static.tildacdn.com/stor6663-6337-4134-b164-336563393133/ab9232ad229ccb48e8a1db9398ccfd9a.webp</picture>
+			<picture>https://static.tildacdn.com/stor3030-6132-4865-b333-393432643938/189f3b351a4d444b6791910e50341c39.webp</picture>
+			<picture>https://static.tildacdn.com/stor3735-6261-4933-b362-333265623037/e7793eb6f7c75d2b4b8a3179fb6c3a94.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-910394681183-benzogenerator-invertornii-tss-sgg-7000e</url>
+			<price>84902.00</price>
+			<oldprice>94335.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>780518169663</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">7 кВт</param>
+			<param name="Мощность максимальная">7.5 кВт</param>
+			<param name="Напряжение">230 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">(Архив)Двигатель бензиновый TSS KM 192F (SGG7000ENA/KM8000AE)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">25 л</param>
+			<param name="Тип запуска">ручной/электростартер</param>
+			<param name="Исполнение">Открытое</param>
+			<param name="Уровень шума">78 дБ</param>
+			<param name="Масса">68.9 кг</param>
+			<param name="Габариты">700х560х585 мм</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="896308998653" available="true">
+			<name>Бензогенератор ТСС SGG 8000EH3NA</name>
+			<vendor>ТСС</vendor>
+			<vendorCode>160015</vendorCode>
+			<description>
+<![CDATA[
+Бензогенератор трехфазный мощностью 7,8 кВт 8000 EH3NA (с электростартом ) предназначен для выработки электроэнергии с основными характеристиками: напряжение 400/230 вольт, частота 50 Гц, оснащенный колесным комплектом и ручками, для удобства передвижения.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3835-3537-4665-b230-306234383434/2ec8bd7a180c9cde166c845cf26fcb36.webp</picture>
+			<picture>https://static.tildacdn.com/stor6430-6233-4835-b139-323437646130/c793d8dc2826a7758ca28a9821f1cf77.webp</picture>
+			<picture>https://static.tildacdn.com/stor6162-6232-4135-b230-343439623562/58a7c07a89422018184e017411e19764.webp</picture>
+			<picture>https://static.tildacdn.com/stor6539-3962-4464-b634-636331616263/ab786b4ab833e298a64ed92392be4d17.webp</picture>
+			<picture>https://static.tildacdn.com/stor3633-3838-4333-b230-626162376561/c2563fbef9ac5240ddb6cf887b9c2be8.webp</picture>
+			<picture>https://static.tildacdn.com/stor6464-6461-4364-b666-373933383934/1901eac456ae99afb8c999b32d8b94a8.webp</picture>
+			<picture>https://static.tildacdn.com/stor3938-6635-4131-b166-333132323132/581491e02055604c37189ae27ff7ab7b.webp</picture>
+			<picture>https://static.tildacdn.com/stor3963-3232-4366-b166-363365303931/9bea38ef167cfb8a339f1e48b2b485f1.webp</picture>
+			<picture>https://static.tildacdn.com/stor3933-6361-4265-a532-316563393034/6975b68e321c6d24eccdc9eb625e2e8e.webp</picture>
+			<picture>https://static.tildacdn.com/stor6263-3537-4361-a133-353463353035/0bde004f2e9945611d90d8adbc784ed0.webp</picture>
+			<picture>https://static.tildacdn.com/stor3334-6263-4365-b935-653232616536/5337406ce746fb370f3eb77522186610.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-896308998653-benzogenerator-tss-sgg-8000eh3na</url>
+			<price>87182.00</price>
+			<oldprice>96869.00</oldprice>
+			<currencyId>RUR</currencyId>
+			<categoryId>141015326003</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">7 кВт</param>
+			<param name="Мощность максимальная">8.3 кВт</param>
+			<param name="Напряжение">230/400 В</param>
+			<param name="Количество фаз">3</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Двигатель бензиновый KM192FP для SGG 8000(арт.1600..) с крышкой генератора / Engine with generator cover (01.05.TSS192FD-101-H25A-2)</param>
+			<param name="Тип топлива">бензин</param>
+			<param name="Объём топливного бака">25 л</param>
+			<param name="Тип запуска">ручной/электростартер</param>
+			<param name="Исполнение">Открытое</param>
+			<param name="Уровень шума">84 дБ</param>
+			<param name="Масса">94 кг</param>
+			<param name="Габариты">730х640х650 с ручками и колесами</param>
+			<param name="Гарантия">12 месяцев</param>
+		</offer>
+		<offer id="257962436103" available="true">
+			<name>Источник бесперебойного питания ИБП Hiden Control HPS20-0612</name>
+			<vendor>Hiden Control</vendor>
+			<vendorCode>00-00000618</vendorCode>
+			<description>
+<![CDATA[
+Модель HPS20-0612 отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3864-3665-4466-b232-316131306363/4c3892a42b3bce2e909a6c6b1f11ca78.webp</picture>
+			<picture>https://static.tildacdn.com/stor6638-6361-4463-a564-326134363638/4f4b3781dc0cee340f1c6e8ec2eddf02.webp</picture>
+			<picture>https://static.tildacdn.com/stor6636-3765-4330-b438-616662353735/4f2457e5fc7b441c63fee28ca08b97b7.webp</picture>
+			<picture>https://static.tildacdn.com/stor3831-3165-4963-b132-313766633032/8410bcee4baa8df01a9fdd0e347f144e.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-257962436103-istochnik-bespereboinogo-pitaniya-ibp-hi</url>
+			<price>16800.00</price>
+			<currencyId>RUR</currencyId>
+			<categoryId>259723601923</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">0.6 кВт</param>
+			<param name="Напряжение">220/230 ± 5%</param>
+			<param name="Частота">50 ± 5Гц</param>
+			<param name="Уровень шума">&lt;60 дБ</param>
+			<param name="Масса">10.7 кг</param>
+			<param name="Габариты">310*265*125 мм</param>
+			<param name="Входное напряжение">140-280 ± 5%</param>
+			<param name="Напряжение АКБ">12 В</param>
+			<param name="Форма волны на выходе">Чистый синус</param>
+		</offer>
+		<offer id="222290416283" available="true">
+			<name>Источник бесперебойного питания ИБП Hiden Control HPS20-1012</name>
+			<vendor>Hiden Control</vendor>
+			<vendorCode>00-00000620</vendorCode>
+			<description>
+<![CDATA[
+Модель HPS20-1012 отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3166-6265-4666-b966-366432346566/a8bfeb91fa8adfd5825316a2a882c868.webp</picture>
+			<picture>https://static.tildacdn.com/stor3565-6563-4437-b466-356132306531/0910bb72023665e3ee01e4ad301b1b88.webp</picture>
+			<picture>https://static.tildacdn.com/stor6634-3133-4133-a530-363636383139/87f3560c38c338e1f3de05ba289a748b.webp</picture>
+			<picture>https://static.tildacdn.com/stor6539-6561-4364-b634-313630313630/7d957e9157f45d81b8f53c6f98fb6792.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-222290416283-istochnik-bespereboinogo-pitaniya-ibp-hi</url>
+			<price>21600.00</price>
+			<currencyId>RUR</currencyId>
+			<categoryId>259723601923</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">1 кВт</param>
+			<param name="Напряжение">220/230 ± 5%</param>
+			<param name="Частота">50 ± 5Гц</param>
+			<param name="Уровень шума">&lt;60 дБ</param>
+			<param name="Масса">13.5 кг</param>
+			<param name="Габариты">310*265*125 мм</param>
+			<param name="Входное напряжение">140-280 ± 5%</param>
+			<param name="Напряжение АКБ">12 В</param>
+			<param name="Форма волны на выходе">Чистый синус</param>
+			<param name="Время переключения">6 мс</param>
+		</offer>
+		<offer id="558739836513" available="true">
+			<name>Источник бесперебойного питания ИБП Hiden Control HPS20-0312N</name>
+			<vendor>Hiden Control</vendor>
+			<vendorCode>00-00000761</vendorCode>
+			<description>
+<![CDATA[
+Модель HPS20-0312N отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой. Получите расчет комплекта под конкретную нагрузку.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3534-3330-4735-b263-303039613761/2a09b9c1632e7dccbdb470c1227119aa.webp</picture>
+			<picture>https://static.tildacdn.com/stor3536-3563-4533-b932-643433343937/fd5984b091648d5bef054f89d831c6b5.webp</picture>
+			<picture>https://static.tildacdn.com/stor3637-6563-4664-a664-643931386331/bf5f355a83889858ad4663646a369437.webp</picture>
+			<picture>https://static.tildacdn.com/stor3034-3534-4132-a564-373534343730/1c79fbad1b93aa2b40b6c74a8a3f421e.webp</picture>
+			<picture>https://static.tildacdn.com/stor3965-3064-4739-a230-386465343536/1c07612874cf7c603ceb490c10393299.webp</picture>
+			<picture>https://static.tildacdn.com/stor6166-3230-4136-b062-396433333265/d31537729013ca52ee82e6e128f6c8b7.webp</picture>
+			<picture>https://static.tildacdn.com/stor3234-6238-4637-a262-306133303161/1075edd4cb59214a0ef9e5fb0ca9ec12.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-558739836513-istochnik-bespereboinogo-pitaniya-ibp-hi</url>
+			<price>15300.00</price>
+			<currencyId>RUR</currencyId>
+			<categoryId>259723601923</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">0.3 кВт</param>
+			<param name="Напряжение">220/230 ± 5%</param>
+			<param name="Частота">50 ± 5Гц</param>
+			<param name="Уровень шума">&lt;45 дБ</param>
+			<param name="Масса">7.7 кг</param>
+			<param name="Габариты">320*300*135 мм</param>
+			<param name="Входное напряжение">140-280 ± 5%</param>
+			<param name="Напряжение АКБ">12 В</param>
+			<param name="Форма волны на выходе">Чистый синус</param>
+			<param name="Время переключения">6 мс</param>
+		</offer>
+		<offer id="370539366173" available="true">
+			<name>Источник бесперебойного питания ИБП Hiden Control HPS20-0612N</name>
+			<vendor>Hiden Control</vendor>
+			<vendorCode>00-00000762</vendorCode>
+			<description>
+<![CDATA[
+Модель HPS20-0612N отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3363-6135-4764-a639-356364633764/bb7834d4d5ccee50bfd16438c611db53.webp</picture>
+			<picture>https://static.tildacdn.com/stor6265-6435-4263-a563-653063383531/8390f18128791ea9d80cd6ddaca32d6a.webp</picture>
+			<picture>https://static.tildacdn.com/stor6132-3938-4961-a365-656262376465/e59b6cd0046bb9c97b133e63f86ccea2.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-370539366173-istochnik-bespereboinogo-pitaniya-ibp-hi</url>
+			<price>18000.00</price>
+			<currencyId>RUR</currencyId>
+			<categoryId>259723601923</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">0.6 кВт</param>
+			<param name="Напряжение">220/230 ± 5%</param>
+			<param name="Частота">50 ± 5Гц</param>
+			<param name="Уровень шума">&lt;45 дБ</param>
+			<param name="Масса">12.7 кг</param>
+			<param name="Габариты">320*300*135 мм</param>
+			<param name="Входное напряжение">140-280 ± 5%</param>
+			<param name="Напряжение АКБ">12 В</param>
+			<param name="Форма волны на выходе">Чистый синус</param>
+		</offer>
+		<offer id="956085436843" available="true">
+			<name>Источник бесперебойного питания ИБП Hiden Control HPS20-1012N</name>
+			<vendor>Hiden Control</vendor>
+			<vendorCode>00-00000763</vendorCode>
+			<description>
+<![CDATA[
+Модель HPS20-1012N отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Линейно-интерактивный источник с чистым синусом. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor6238-3066-4263-a363-623839353734/72080c8fe07053fa51f43d87d4662910.webp</picture>
+			<picture>https://static.tildacdn.com/stor3538-3762-4238-b264-353636313630/c1de05c71ac020ea02c1ce6a99104d3c.webp</picture>
+			<picture>https://static.tildacdn.com/stor6238-3661-4538-b433-373537333331/f3e7a478cbc108f30c50b2126a96aead.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-956085436843-istochnik-bespereboinogo-pitaniya-ibp-hi</url>
+			<price>23400.00</price>
+			<currencyId>RUR</currencyId>
+			<categoryId>259723601923</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">1 кВт</param>
+			<param name="Напряжение">220/230 ± 5%</param>
+			<param name="Частота">50 ± 5Гц</param>
+			<param name="Уровень шума">&lt;45 дБ</param>
+			<param name="Масса">15.2 кг</param>
+			<param name="Габариты">320*300*135 мм</param>
+			<param name="Входное напряжение">140-280 ± 5%</param>
+			<param name="Напряжение АКБ">12 В</param>
+			<param name="Форма волны на выходе">Чистый синус</param>
+			<param name="Время переключения">6 мс</param>
+		</offer>
+		<offer id="542759818673" available="true">
+			<name>Источник бесперебойного питания ИБП Hiden Control HPS20-0312</name>
+			<vendor>Hiden Control</vendor>
+			<vendorCode>HPS20-0312</vendorCode>
+			<description>
+<![CDATA[
+Модель HPS20-0312 отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой. Получите расчет комплекта под конкретную нагрузку.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor6233-3033-4835-a566-326262656237/475021cd7a53365c028b5bd0de8f61e9.webp</picture>
+			<picture>https://static.tildacdn.com/stor3132-6430-4163-b436-366239393033/c790c21ed73eaf0efe67ade9833e2284.webp</picture>
+			<picture>https://static.tildacdn.com/stor3161-3161-4437-b335-343737333965/fb4f62902625f9ca2796dcb12bb0c02d.webp</picture>
+			<picture>https://static.tildacdn.com/stor6664-6265-4439-a461-653230353633/4428262f928ab64cefe980396b3a0d93.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-542759818673-istochnik-bespereboinogo-pitaniya-ibp-hi</url>
+			<price>13900.00</price>
+			<currencyId>RUR</currencyId>
+			<categoryId>259723601923</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<param name="Мощность номинальная">0.3 кВт</param>
+			<param name="Напряжение">220/230 ± 5%</param>
+			<param name="Частота">50 ± 5Гц</param>
+			<param name="Уровень шума">&lt;45 дБ</param>
+			<param name="Масса">7.7 кг</param>
+			<param name="Габариты">320*300*135 мм</param>
+			<param name="Входное напряжение">140-280 ± 5%</param>
+			<param name="Напряжение АКБ">12 В</param>
+			<param name="Форма волны на выходе">Чистый синус</param>
+			<param name="Время переключения">6 мс</param>
+		</offer>
+		<offer id="166651400853" available="true">
+			<name>Газовый генератор Steinmets 7000 E</name>
+			<vendor>Steinmets</vendor>
+			<vendorCode>67021</vendorCode>
+			<description>
+<![CDATA[
+Газовый генератор Steinmets 7000 E на 6 кВт номинальной и 6.5 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель EVOline GB 420 E с электростартером. Подходит как резервный источник питания для дома, котельной и небольшого магазина: не нужно хранить бензин, а ресурс мотора выше, чем у бензиновых аналогов.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3961-3038-4764-b134-326432316463/1d8efca8da02f858502a37e69c95d324.webp</picture>
+			<picture>https://static.tildacdn.com/stor6539-6538-4434-b462-313864643962/ea1db5bd80faa767e391965941570ce0.webp</picture>
+			<picture>https://static.tildacdn.com/stor3937-3064-4364-b131-306433376533/e9f27552fc97a03990a991493749313b.webp</picture>
+			<picture>https://static.tildacdn.com/stor3136-3134-4033-b639-303332373432/6baf61a9b88104bbfe315f496e483a42.webp</picture>
+			<picture>https://static.tildacdn.com/stor3931-3231-4331-b532-313638623066/44acb686a85c161dfae64d6824a77108.webp</picture>
+			<picture>https://static.tildacdn.com/stor3661-6165-4339-b334-663464386230/b3b932de0954751ecc362f5034e87d4e.webp</picture>
+			<picture>https://static.tildacdn.com/stor3433-3834-4262-b265-353039633763/00169e0e48685c01175991ba1f3dd6d5.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-166651400853-gazovii-generator-steinmets-7000-e</url>
+			<price>285000.00</price>
+			<currencyId>RUR</currencyId>
+			<categoryId>594805333963</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<weight>0.125</weight>
+			<dimensions>114/70/88</dimensions>
+			<param name="Мощность номинальная">6 кВт</param>
+			<param name="Мощность максимальная">6.5 кВт</param>
+			<param name="Напряжение">220 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">EVOline GB 420 E</param>
+			<param name="Тип топлива">газ (природный / сжиженный)</param>
+			<param name="Тип запуска">электростартер</param>
+			<param name="Исполнение">в кожухе</param>
+			<param name="Уровень шума">63 дБ</param>
+			<param name="Масса">125 кг</param>
+			<param name="Габариты">1140х700х880 мм</param>
+			<param name="Гарантия">24 мес или 500 моточасов</param>
+		</offer>
+		<offer id="804701454053" available="true">
+			<name>Газовый генератор Steinmets 9000 E</name>
+			<vendor>Steinmets</vendor>
+			<vendorCode>67022</vendorCode>
+			<description>
+<![CDATA[
+Газовый генератор Steinmets 9000 E на 8 кВт номинальной и 8.5 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель EVOline GB 460 E с электростартером. Подходит как резервный источник питания для дома, котельной и небольшого магазина: не нужно хранить бензин, а ресурс мотора выше, чем у бензиновых аналогов.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3663-3533-4762-b034-613135356136/4534953f4574ec9cc4ef43c338e72027.webp</picture>
+			<picture>https://static.tildacdn.com/stor3733-3338-4437-b134-663230366237/bbd4e7a28ba4560d3f04d76408de2c6e.webp</picture>
+			<picture>https://static.tildacdn.com/stor6138-6533-4666-b334-373665316262/2b9da93efc9ef108799e0e222ffbf387.webp</picture>
+			<picture>https://static.tildacdn.com/stor6439-6565-4532-b237-613137323534/2d44bde2d8bda21cff25d72a5ad43ca4.webp</picture>
+			<picture>https://static.tildacdn.com/stor6665-3761-4666-b461-323162333638/b79e70bfbbbaab4f4e6dffeacc9dc302.webp</picture>
+			<picture>https://static.tildacdn.com/stor3236-6435-4564-a332-623731363064/06beeecb134d9e56d73e10e945024fa1.webp</picture>
+			<picture>https://static.tildacdn.com/stor6136-3831-4764-b263-653230663761/a574a209f17c12d6ac19dfb3f23d3f46.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-804701454053-gazovii-generator-steinmets-9000-e</url>
+			<price>305000.00</price>
+			<currencyId>RUR</currencyId>
+			<categoryId>594805333963</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<weight>0.135</weight>
+			<dimensions>114/70/88</dimensions>
+			<param name="Мощность номинальная">8 кВт</param>
+			<param name="Мощность максимальная">8.5 кВт</param>
+			<param name="Напряжение">220 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">EVOline GB 460 E</param>
+			<param name="Тип топлива">газ (природный / сжиженный)</param>
+			<param name="Тип запуска">электростартер</param>
+			<param name="Исполнение">в кожухе</param>
+			<param name="Уровень шума">63 дБ</param>
+			<param name="Масса">135 кг</param>
+			<param name="Габариты">1140х700х880 мм</param>
+			<param name="Гарантия">24 мес или 500 моточасов</param>
+		</offer>
+		<offer id="729352154283" available="true">
+			<name>Газовый генератор Steinmets 6000 EH</name>
+			<vendor>Steinmets</vendor>
+			<vendorCode>67018</vendorCode>
+			<description>
+<![CDATA[
+Газовый генератор Steinmets 6000 EH на 5 кВт номинальной и 5.5 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель Honda GX 390 с электростартером. Подходит как резервный источник питания для дома, котельной и небольшого магазина: не нужно хранить бензин, а ресурс мотора выше, чем у бензиновых аналогов.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor6435-6533-4564-b438-613433306331/e74bbfa9f1ce84e004d7b238e258a2bb.webp</picture>
+			<picture>https://static.tildacdn.com/stor6538-3763-4535-a632-383335373134/d8650cfd1ab2839c5dc4d6ec85c534f0.webp</picture>
+			<picture>https://static.tildacdn.com/stor6431-6539-4231-b132-336363323663/9fbf1547ce7663edf387b4356d093670.webp</picture>
+			<picture>https://static.tildacdn.com/stor6230-3233-4465-b561-333037313063/f409df7c45e52a4a4b6a38a49010d16a.webp</picture>
+			<picture>https://static.tildacdn.com/stor6530-3663-4261-b663-333864376662/d5405b2c96301a96270d56d4f5c7a3b0.webp</picture>
+			<picture>https://static.tildacdn.com/stor6361-3062-4230-a262-393736343731/f3507259b9fb6344804c9ad5c233d982.webp</picture>
+			<picture>https://static.tildacdn.com/stor3561-3565-4531-b462-313034313730/cdbbfa72cec1760e4a40c25177ca6a1d.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-729352154283-gazovii-generator-steinmets-6000-eh</url>
+			<price>305000.00</price>
+			<currencyId>RUR</currencyId>
+			<categoryId>594805333963</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<weight>0.115</weight>
+			<dimensions>114/70/88</dimensions>
+			<param name="Мощность номинальная">5 кВт</param>
+			<param name="Мощность максимальная">5.5 кВт</param>
+			<param name="Напряжение">220 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Honda GX 390</param>
+			<param name="Тип топлива">газ (природный / сжиженный)</param>
+			<param name="Тип запуска">электростартер</param>
+			<param name="Исполнение">в кожухе</param>
+			<param name="Уровень шума">63 дБ</param>
+			<param name="Масса">115 кг</param>
+			<param name="Габариты">1140х700х880 мм</param>
+			<param name="Гарантия">24 мес или 500 моточасов</param>
+		</offer>
+		<offer id="624511014233" available="true">
+			<name>Газовый генератор Steinmets 12000 E</name>
+			<vendor>Steinmets</vendor>
+			<vendorCode>67023</vendorCode>
+			<description>
+<![CDATA[
+Газовый генератор Steinmets 12000 E на 10 кВт номинальной и 11 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель EVOline GB 680 E с электростартером. Подходит как резервный источник питания для дома, котельной и небольшого магазина: не нужно хранить бензин, а ресурс мотора выше, чем у бензиновых аналогов.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3333-6230-4733-b938-643765653862/34cec498f72dc2b355ed538b9b7cfbf7.webp</picture>
+			<picture>https://static.tildacdn.com/stor6131-6163-4561-a538-613162346237/a7b3634bfac6d52d7886fb85ce3f2628.webp</picture>
+			<picture>https://static.tildacdn.com/stor6364-3864-4937-b761-396331366632/57145cc99d3d95454c4e6b1d5242520b.webp</picture>
+			<picture>https://static.tildacdn.com/stor6239-3962-4333-b730-616461633166/3095af6914f52e68afcebe0ba9c0baa4.webp</picture>
+			<picture>https://static.tildacdn.com/stor3132-3739-4138-b861-653964623430/763856fd4650c9dba85d94c6117ef44a.webp</picture>
+			<picture>https://static.tildacdn.com/stor3561-6663-4064-b230-353831326665/fc30a646fceca241b1161f189404d905.webp</picture>
+			<picture>https://static.tildacdn.com/stor3338-6638-4539-b033-373763383434/ed3d4fc03aaecdf3e2529793e4bc9c47.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-624511014233-gazovii-generator-steinmets-12000-e</url>
+			<price>455000.00</price>
+			<currencyId>RUR</currencyId>
+			<categoryId>594805333963</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<weight>0.185</weight>
+			<dimensions>114/70/88</dimensions>
+			<param name="Мощность номинальная">10 кВт</param>
+			<param name="Мощность максимальная">11 кВт</param>
+			<param name="Напряжение">220 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">EVOline GB 680 E</param>
+			<param name="Тип топлива">газ (природный / сжиженный)</param>
+			<param name="Тип запуска">электростартер</param>
+			<param name="Исполнение">в кожухе</param>
+			<param name="Уровень шума">63 дБ</param>
+			<param name="Масса">185 кг</param>
+			<param name="Габариты">1140х700х880 мм</param>
+			<param name="Гарантия">24 мес или 500 моточасов</param>
+		</offer>
+		<offer id="712531878033" available="true">
+			<name>Газовый генератор Steinmets 15000 E</name>
+			<vendor>Steinmets</vendor>
+			<vendorCode>67024</vendorCode>
+			<description>
+<![CDATA[
+Газовый генератор Steinmets 15000 E на 12 кВт номинальной и 13 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель EVOline GB 750 E с электростартером. Подходит как резервный источник питания для дома, котельной и небольшого магазина: не нужно хранить бензин, а ресурс мотора выше, чем у бензиновых аналогов.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3832-3038-4633-a536-623266633931/72f131586ddce43e0ce4311e1a2905c7.webp</picture>
+			<picture>https://static.tildacdn.com/stor3736-3533-4463-a538-323962663531/37ee93cae924b87dadd7c7aae8702b88.webp</picture>
+			<picture>https://static.tildacdn.com/stor3161-3861-4463-b730-383762363834/0d509eb74b968a2239fd0fee09f5f020.webp</picture>
+			<picture>https://static.tildacdn.com/stor6339-6639-4638-a435-313039653839/960fea8e63f35bb914d0e6e2cc654505.webp</picture>
+			<picture>https://static.tildacdn.com/stor3662-3233-4235-b239-386164646430/95b9004d647208381981896ae9fd8557.webp</picture>
+			<picture>https://static.tildacdn.com/stor3661-6433-4934-b162-646237363366/6f688730a95d64aec946d4259c03842d.webp</picture>
+			<picture>https://static.tildacdn.com/stor3062-6439-4961-b966-313065333166/d1e06275597b76a336011f907669cdb9.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-712531878033-gazovii-generator-steinmets-15000-e</url>
+			<price>491000.00</price>
+			<currencyId>RUR</currencyId>
+			<categoryId>594805333963</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<weight>0.19</weight>
+			<dimensions>114/70/88</dimensions>
+			<param name="Мощность номинальная">12 кВт</param>
+			<param name="Мощность максимальная">13 кВт</param>
+			<param name="Напряжение">220 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">EVOline GB 750 E</param>
+			<param name="Тип топлива">газ (природный / сжиженный)</param>
+			<param name="Тип запуска">электростартер</param>
+			<param name="Исполнение">в кожухе</param>
+			<param name="Уровень шума">63 дБ</param>
+			<param name="Масса">190 кг</param>
+			<param name="Габариты">1140х700х880 мм</param>
+			<param name="Гарантия">24 мес или 500 моточасов</param>
+		</offer>
+		<offer id="622020866183" available="true">
+			<name>Газовый генератор Steinmets 10000 EH</name>
+			<vendor>Steinmets</vendor>
+			<vendorCode>67019</vendorCode>
+			<description>
+<![CDATA[
+Газовый генератор Steinmets 10000 EH на 10 кВт номинальной и 11 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель Honda GX 630 с электростартером. Подходит как резервный источник питания для дома, котельной и небольшого магазина: не нужно хранить бензин, а ресурс мотора выше, чем у бензиновых аналогов.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor3838-6464-4361-b030-663639313563/e3f9a24862f6a25337e376be1d2b3a2e.webp</picture>
+			<picture>https://static.tildacdn.com/stor6462-3335-4631-a566-343531363539/2e61f1a7c0f7ae9e7424215beae36c19.webp</picture>
+			<picture>https://static.tildacdn.com/stor3238-3663-4539-b161-633432386661/376de12459d2b85dfc61a449fe570896.webp</picture>
+			<picture>https://static.tildacdn.com/stor6231-3538-4036-a636-623963633566/a6d1477610e6db982fd5daf98382ec2f.webp</picture>
+			<picture>https://static.tildacdn.com/stor3737-6538-4661-b031-316239646564/f260e9c5fb51481e891f0b5927c3eb19.webp</picture>
+			<picture>https://static.tildacdn.com/stor3533-3938-4163-a562-353265323966/4d95644e950072f1c020b91dc3fc1d81.webp</picture>
+			<picture>https://static.tildacdn.com/stor3364-6439-4564-b062-623662636165/44c71bf9f8ede29e998ee210e296eefc.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-622020866183-gazovii-generator-steinmets-10000-eh</url>
+			<price>505000.00</price>
+			<currencyId>RUR</currencyId>
+			<categoryId>594805333963</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<weight>0.115</weight>
+			<dimensions>114/70/88</dimensions>
+			<param name="Мощность номинальная">10 кВт</param>
+			<param name="Мощность максимальная">11 кВт</param>
+			<param name="Напряжение">220 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Honda GX 630</param>
+			<param name="Тип топлива">газ (природный / сжиженный)</param>
+			<param name="Тип запуска">электростартер</param>
+			<param name="Исполнение">в кожухе</param>
+			<param name="Уровень шума">63 дБ</param>
+			<param name="Масса">115 кг</param>
+			<param name="Габариты">1140х700х880 мм</param>
+			<param name="Гарантия">24 мес или 500 моточасов</param>
+		</offer>
+		<offer id="338885935443" available="true">
+			<name>Газовый генератор Steinmets 12000 EH</name>
+			<vendor>Steinmets</vendor>
+			<vendorCode>67020</vendorCode>
+			<description>
+<![CDATA[
+Газовый генератор Steinmets 12000 EH на 11 кВт номинальной и 12 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель Honda GX 690 с электростартером. Подходит как резервный источник питания для дома, котельной и небольшого магазина: не нужно хранить бензин, а ресурс мотора выше, чем у бензиновых аналогов.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor6537-3133-4239-a132-663432303538/48f88f91ed75775cfb0fd128f040fcff.webp</picture>
+			<picture>https://static.tildacdn.com/stor6430-6365-4261-b935-636465616431/754fcc3b4feef7b5868924c59eb21222.webp</picture>
+			<picture>https://static.tildacdn.com/stor3135-6538-4131-a630-383863333036/a5335fda58fe8bcb924b475e814c0e1d.webp</picture>
+			<picture>https://static.tildacdn.com/stor3862-3030-4436-b433-373361616164/50eb6979f75fd8de64b2e83e293864bb.webp</picture>
+			<picture>https://static.tildacdn.com/stor3337-3161-4936-b633-366164666330/4b7648d742d99d1a4f1855df23170c45.webp</picture>
+			<picture>https://static.tildacdn.com/stor3334-3439-4063-b766-633961616434/00923794c589168ba9cd7028ea42d6d1.webp</picture>
+			<picture>https://static.tildacdn.com/stor6138-3633-4835-b834-636638316465/6c7498b4b335840d8f790673d672bd93.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-338885935443-gazovii-generator-steinmets-12000-eh</url>
+			<price>530000.00</price>
+			<currencyId>RUR</currencyId>
+			<categoryId>594805333963</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<weight>0.115</weight>
+			<dimensions>114/70/88</dimensions>
+			<param name="Мощность номинальная">11 кВт</param>
+			<param name="Мощность максимальная">12 кВт</param>
+			<param name="Напряжение">220 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">Honda GX 690</param>
+			<param name="Тип топлива">газ (природный / сжиженный)</param>
+			<param name="Тип запуска">электростартер</param>
+			<param name="Исполнение">в кожухе</param>
+			<param name="Уровень шума">63 дБ</param>
+			<param name="Масса">115 кг</param>
+			<param name="Габариты">1140х700х880 мм</param>
+			<param name="Гарантия">24 мес или 500 моточасов</param>
+		</offer>
+		<offer id="362178044733" available="true">
+			<name>Газовый генератор Steinmets 18000 E</name>
+			<vendor>Steinmets</vendor>
+			<vendorCode>67025</vendorCode>
+			<description>
+<![CDATA[
+Газовый генератор Steinmets 18000 E на 15 кВт номинальной и 16 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель EVOline GB 1000 с электростартером. Подходит как резервный источник питания для дома, котельной и небольшого магазина: не нужно хранить бензин, а ресурс мотора выше, чем у бензиновых аналогов.
+]]>
+			</description>
+			<picture>https://static.tildacdn.com/stor6362-6566-4830-b766-373861663266/21f7a2fe389e4e1d81d8d97425d0a811.webp</picture>
+			<picture>https://static.tildacdn.com/stor3636-3539-4636-a362-633733613166/5901e89bf60ee394a25d689b64248823.webp</picture>
+			<picture>https://static.tildacdn.com/stor6339-3962-4165-b562-656638333131/3f4d5272075ae556d3421f27cb3bb6b1.webp</picture>
+			<picture>https://static.tildacdn.com/stor3665-3137-4334-b332-613337313737/49505dd08638689d1ad54553380f29b1.webp</picture>
+			<picture>https://static.tildacdn.com/stor3433-3739-4362-b565-356133626132/7e8be57ed049d5c3a5b7bc41449378e7.webp</picture>
+			<picture>https://static.tildacdn.com/stor3633-3963-4263-b232-306230336437/a950f97036f1d6b0b4399b2b26f6a57b.webp</picture>
+			<picture>https://static.tildacdn.com/stor3062-6630-4666-b264-376263643839/dcb8d4db952159b77788ef1f7788c32f.webp</picture>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-362178044733-gazovii-generator-steinmets-18000-e</url>
+			<price>561000.00</price>
+			<currencyId>RUR</currencyId>
+			<categoryId>594805333963</categoryId>
+			<delivery>true</delivery>
+			<pickup>true</pickup>
+			<weight>0.245</weight>
+			<dimensions>114/70/88</dimensions>
+			<param name="Мощность номинальная">15 кВт</param>
+			<param name="Мощность максимальная">16 кВт</param>
+			<param name="Напряжение">220 В</param>
+			<param name="Количество фаз">1</param>
+			<param name="Частота">50 Гц</param>
+			<param name="Двигатель">EVOline GB 1000</param>
+			<param name="Тип топлива">газ (природный / сжиженный)</param>
+			<param name="Тип запуска">электростартер</param>
+			<param name="Исполнение">в кожухе</param>
+			<param name="Уровень шума">63 дБ</param>
+			<param name="Масса">245 кг</param>
+			<param name="Габариты">1140х700х880 мм</param>
+			<param name="Гарантия">24 мес или 500 моточасов</param>
+		</offer>
+		</offers>
+	</shop>
+</yml_catalog>
