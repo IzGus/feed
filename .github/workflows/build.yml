@@ -31,7 +31,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add elektromontazhnik_direct.yml elektromontazhnik_tovary.xml
+          git add elektromontazhnik_direct.yml elektromontazhnik_tovary.xml elektromontazhnik_business.xml
           if git diff --cached --quiet; then
             echo "Изменений нет"
           else

@@ -8,6 +8,8 @@
 Выход: Яндекс Директ/feeds/elektromontazhnik_direct.yml  — для Директа (ЕПК)
        Яндекс Директ/feeds/elektromontazhnik_tovary.xml  — для Яндекс Товаров
        (то, что раньше было «Товары и цены» в Вебмастере; merchants.yandex.ru)
+       Яндекс Директ/feeds/elektromontazhnik_business.xml — для Яндекс Бизнеса
+       (прайс-лист профиля компании и рекламная подписка)
 
 Общее для обоих фидов:
   1. В <categories> добавляются подразделы Тильды с parentId на родительский раздел.
@@ -20,8 +22,12 @@
      available="true", в date подставляется время сборки (файл не старше 10 дней). Расширение .xml, чтобы GitHub Pages отдавал text/xml — text/yaml Товары не принимают.
 Все остальное в фиде (шапка, офферы, param) не трогается — обработка текстовая,
 чтобы не ломать CDATA и форматирование Тильды.
+Для Яндекс Бизнеса (target=business) файл собирается заново по справке
+business-priority/ru/manage/price-list (раздел «Загрузка файла YML»): плоские категории
+(подразделы без parentId), у оффера только name, vendor, price, currencyId=RUB, categoryId,
+одна picture, description без HTML, shortDescription до 250 знаков, url.
 
-Запуск: PYTHONIOENCODING=utf-8 python scripts/direct_feed.py [--target direct|tovary|all]
+Запуск: PYTHONIOENCODING=utf-8 python scripts/direct_feed.py [--target direct|tovary|business|all]
         [--check-urls] [--publish] [--from-file feed.yml] [--parts-file parts.json] [--out путь.yml]
 
 --publish копирует результат и сам скрипт в репозиторий feed-github и делает git commit + push;
@@ -49,6 +55,7 @@ DIR = os.path.join(ROOT, 'Яндекс Директ', 'feeds')
 OUT_FILES = OrderedDict([
     ('direct', os.path.join(DIR, 'elektromontazhnik_direct.yml')),
     ('tovary', os.path.join(DIR, 'elektromontazhnik_tovary.xml')),
+    ('business', os.path.join(DIR, 'elektromontazhnik_business.xml')),
 ])
 REPO_DIR = os.path.join(ROOT, 'feed-github')   # локальный клон github.com/IzGus/feed
 PUBLIC_BASE = 'https://izgus.github.io/feed/'
@@ -111,6 +118,31 @@ def subpart_url(uid):
 def xml_escape(s):
     return (s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
             .replace('"', '&quot;'))
+
+
+def strip_html(text):
+    """HTML из описания Тильды -> простой текст: теги в пробелы, сущности раскрыты."""
+    import html as _html
+    t = re.sub(r'<br\s*/?>|</p>|</div>|</li>', '\n', text or '', flags=re.I)
+    t = re.sub(r'<[^>]+>', ' ', t)
+    t = _html.unescape(t)
+    t = re.sub(r'[ \t]+', ' ', t)
+    t = re.sub(r'\s*\n\s*', '\n', t)
+    return t.strip()
+
+
+def short_text(text, limit=250):
+    """Первые предложения текста, не длиннее limit знаков, без обрыва слова."""
+    t = re.sub(r'\s+', ' ', text).strip()
+    if len(t) <= limit:
+        return t
+    cut = t[:limit]
+    # сначала граница предложения (даже если получится коротко), потом запятая, потом слово
+    for sep, minpos in (('. ', limit // 4), ('! ', limit // 4), ('; ', limit // 2), (', ', limit // 2), (' ', limit // 2)):
+        i = cut.rfind(sep)
+        if i > minpos:
+            return cut[:i + (1 if sep[0] in '.!' else 0)].rstrip(' ,;')
+    return cut.rstrip()
 
 
 def fetch(url, binary=False, tries=3):
@@ -189,6 +221,9 @@ def build(feed, parts, target='direct'):
             gallery = []
         if gallery:
             first_photo[uid] = gallery[0]['img']
+
+    if target == 'business':
+        return build_business(feed, root_part, sub_by_uid, prod_sub, warnings)
 
     # --- <categories> ----------------------------------------------------
     cats = ['\t\t<categories>',
@@ -296,6 +331,88 @@ def build(feed, parts, target='direct'):
     return feed, stats, warnings
 
 
+def build_business(feed, root_part, sub_by_uid, prod_sub, warnings):
+    """Фид для Яндекс Бизнеса: собирается заново из разобранного фида Тильды."""
+    src = ET.fromstring(feed.encode('utf-8'))
+    shop = src.find('shop')
+    per_cat = defaultdict(int)
+    used_cats = OrderedDict()
+    offers_xml = []
+    seen = set()
+    for o in shop.findall('offers/offer'):
+        oid = o.get('id')
+        seen.add(oid)
+        sub = prod_sub.get(oid)
+        if sub is None:
+            warnings.append('Оффер %s без подраздела — отнесен к «%s»' % (oid, root_part['title']))
+        cat = sub or PARENT_UID
+        used_cats[cat] = sub_by_uid.get(cat, root_part['title'])
+        per_cat[cat] += 1
+        name = (o.findtext('name') or '').strip()
+        vendor = (o.findtext('vendor') or '').strip()
+        if not vendor:
+            warnings.append('Оффер %s без vendor — для Бизнеса он обязателен' % oid)
+        price = (o.findtext('price') or '').strip()
+        if price.endswith('.00'):
+            price = price[:-3]
+        pics = [p.text.strip() for p in o.findall('picture') if p.text]
+        descr = strip_html(o.findtext('description') or '')
+        if re.search(r'https?://|www\.', descr) or re.search(r'\+?\d[\d\s()-]{9,}\d', descr):
+            warnings.append('Оффер %s: в описании ссылка или телефон — Бизнес такое не публикует' % oid)
+        descr = descr[:3000]
+        short = short_text(descr, 250)
+        lines = ['\t\t<offer id="%s">' % oid,
+                 '\t\t\t<name>%s</name>' % xml_escape(name[:250]),
+                 '\t\t\t<vendor>%s</vendor>' % xml_escape(vendor),
+                 '\t\t\t<price>%s</price>' % price,
+                 '\t\t\t<currencyId>RUB</currencyId>',
+                 '\t\t\t<categoryId>%s</categoryId>' % cat]
+        if pics:
+            lines.append('\t\t\t<picture>%s</picture>' % xml_escape(pics[0]))
+        else:
+            warnings.append('Оффер %s без картинки' % oid)
+        if descr:
+            lines.append('\t\t\t<description>%s</description>' % xml_escape(descr))
+            lines.append('\t\t\t<shortDescription>%s</shortDescription>' % xml_escape(short))
+        url = (o.findtext('url') or '').strip()
+        if url:
+            lines.append('\t\t\t<url>%s</url>' % xml_escape(url[:512]))
+        lines.append('\t\t</offer>')
+        offers_xml.append('\n'.join(lines))
+    for uid in prod_sub:
+        if uid not in seen:
+            warnings.append('Товар %s есть в API каталога, но нет в фиде' % uid)
+
+    # категории — плоские, в порядке подразделов Тильды
+    ordered = [(u, t) for u, t in sub_by_uid.items() if u in used_cats]
+    if PARENT_UID in used_cats:
+        ordered.append((PARENT_UID, root_part['title']))
+    tz = datetime.timezone(datetime.timedelta(hours=3))
+    now = datetime.datetime.now(tz).strftime('%Y-%m-%dT%H:%M:%S+03:00')
+    out = ['<?xml version="1.0" encoding="UTF-8"?>',
+           '<yml_catalog date="%s">' % now,
+           '\t<shop>',
+           '\t\t<name>%s</name>' % xml_escape(shop.findtext('name') or ''),
+           '\t\t<company>%s</company>' % xml_escape(shop.findtext('company') or ''),
+           '\t\t<url>%s</url>' % xml_escape(shop.findtext('url') or ''),
+           '\t\t<currencies>',
+           '\t\t\t<currency id="RUB" rate="1"/>',
+           '\t\t</currencies>',
+           '\t\t<categories>']
+    for uid, title in ordered:
+        out.append('\t\t\t<category id="%s">%s</category>' % (uid, xml_escape(title)))
+    out += ['\t\t</categories>', '\t\t<offers>']
+    out += offers_xml
+    out += ['\t\t</offers>', '\t</shop>', '</yml_catalog>', '']
+    stats = {
+        'offers': len(seen),
+        'per_cat': per_cat,
+        'per_coll': {},
+        'cat_titles': OrderedDict(ordered),
+    }
+    return '\n'.join(out), stats, warnings
+
+
 def validate(text, check_urls=False, target='direct'):
     """Структурная проверка результата. Возвращает список ошибок."""
     errors = []
@@ -323,6 +440,41 @@ def validate(text, check_urls=False, target='direct'):
             errors.append('Каталог %s без picture' % cid)
         urls.append(c.findtext('url'))
         urls.extend(pics)
+    if target == 'business':
+        # справка Яндекс Бизнеса: плоские категории, RUB, одна картинка, обязательный vendor
+        for c in shop.findall('categories/category'):
+            if c.get('parentId'):
+                errors.append('Категория %s с parentId — для Бизнеса категории плоские' % c.get('id'))
+        for o in shop.findall('offers/offer'):
+            oid = o.get('id')
+            for tag in ('name', 'vendor', 'price', 'currencyId', 'categoryId'):
+                if not (o.findtext(tag) or '').strip():
+                    errors.append('Оффер %s без %s' % (oid, tag))
+            if o.findtext('currencyId') != 'RUB':
+                errors.append('Оффер %s: валюта должна быть RUB' % oid)
+            if o.findtext('categoryId') not in cat_ids:
+                errors.append('Оффер %s: categoryId нет в <categories>' % oid)
+            if len(o.findall('picture')) != 1:
+                errors.append('Оффер %s: должна быть ровно одна picture' % oid)
+            if len(oid) > 80 or re.search(r'[^0-9A-Za-zА-Яа-я.,/\\()\[\]=-]', oid):
+                errors.append('Оффер %s: недопустимый id' % oid)
+            if len(o.findtext('name') or '') > 250:
+                errors.append('Оффер %s: название длиннее 250' % oid)
+            if len(o.findtext('description') or '') > 3000:
+                errors.append('Оффер %s: описание длиннее 3000' % oid)
+            if len(o.findtext('shortDescription') or '') > 250:
+                errors.append('Оффер %s: shortDescription длиннее 250' % oid)
+            if len(o.findtext('url') or '') > 512:
+                errors.append('Оффер %s: url длиннее 512' % oid)
+            if not re.fullmatch(r'[0-9]+([.,][0-9]+)?', o.findtext('price') or '') or float((o.findtext('price') or '0').replace(',', '.')) <= 0:
+                errors.append('Оффер %s: цена должна быть положительным числом' % oid)
+            if check_urls:
+                urls.append(o.findtext('picture'))
+        if check_urls:
+            for u in urls:
+                if not head_ok(u):
+                    errors.append('URL не отвечает 200: %s' % u)
+        return errors
     if target == 'direct' and not colls:
         errors.append('Нет блока <collections>')
     if target == 'tovary' and shop.find('collections') is not None:
@@ -393,8 +545,8 @@ def publish(out_paths):
 
 def main():
     ap = argparse.ArgumentParser(description='Адаптация фида Тильды под Яндекс Директ и Яндекс Товары')
-    ap.add_argument('--target', choices=['direct', 'tovary', 'all'], default='all',
-                    help='какой фид собирать (по умолчанию оба)')
+    ap.add_argument('--target', choices=['direct', 'tovary', 'business', 'all'], default='all',
+                    help='какой фид собирать (по умолчанию все)')
     ap.add_argument('--from-file', help='локальная копия фида Тильды вместо скачивания')
     ap.add_argument('--parts-file', help='локальная копия ответа API Тильды (JSON)')
     ap.add_argument('--out', help='куда писать результат (.yml или .xml); только при одном --target')

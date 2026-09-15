@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2026-09-15T05:59:22+03:00">
+	<shop>
+		<name>Электромонтажник</name>
+		<company>Генераторы и ИБП</company>
+		<url>https://elektromontazhnik64.ru</url>
+		<currencies>
+			<currency id="RUB" rate="1"/>
+		</currencies>
+		<categories>
+			<category id="780518169663">Инверторные бензогенераторы</category>
+			<category id="141015326003">Бензиновые генераторы</category>
+			<category id="594805333963">Газовые и гибридные генераторы</category>
+			<category id="259723601923">Источники бесперебойного питания</category>
+		</categories>
+		<offers>
+		<offer id="587626563683">
+			<name>Бензогенератор инверторный ТСС SGG 1400Si</name>
+			<vendor>ТСС</vendor>
+			<price>28836</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>780518169663</categoryId>
+			<picture>https://static.tildacdn.com/stor6135-6139-4161-b766-623233336133/7c822da48dc442cb4a2c0b89a77b824d.webp</picture>
+			<description>Инверторный бензогенератор ТСС SGG 1400Si с номинальной мощностью 1,2 кВт предназначен для питания чувствительной электроники на выездных работах, даче или в кемпинге.</description>
+			<shortDescription>Инверторный бензогенератор ТСС SGG 1400Si с номинальной мощностью 1,2 кВт предназначен для питания чувствительной электроники на выездных работах, даче или в кемпинге.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-587626563683-benzogenerator-invertornii-tss-sgg-1400s</url>
+		</offer>
+		<offer id="283465663003">
+			<name>Бензогенератор инверторный ТСС SGG 2100Si</name>
+			<vendor>ТСС</vendor>
+			<price>34493</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>780518169663</categoryId>
+			<picture>https://static.tildacdn.com/stor3637-6466-4063-a662-363831383732/be7516a3eaf5693f332b031ce8a73a68.webp</picture>
+			<description>Бензогенератор инверторный SGG 2100Si – это портативный источник электроэнергии, объединяющий в себе передовые технологии и компактный дизайн, предназначенный для обеспечения надежного электропитания в самых разнообразных ситуациях. От загородных поездок и кемпинга до аварийного электроснабжения дома или использования на строительных площадках, этот генератор станет незаменимым помощником.</description>
+			<shortDescription>Бензогенератор инверторный SGG 2100Si – это портативный источник электроэнергии, объединяющий в себе передовые технологии и компактный дизайн, предназначенный для обеспечения надежного электропитания в самых разнообразных ситуациях.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-283465663003-benzogenerator-invertornii-tss-sgg-2100s</url>
+		</offer>
+		<offer id="192159680893">
+			<name>Бензогенератор ТСС SGG 2000N</name>
+			<vendor>ТСС</vendor>
+			<price>17631</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>141015326003</categoryId>
+			<picture>https://static.tildacdn.com/stor3264-6235-4336-b264-306536343662/c7ddb8c40c8fb34e4426e26f71e06c3e.webp</picture>
+			<description>Однофазный бензиновый генератор TSS SGG 2000N совершенно незаменим для множества ситуаций, где требуется недорогой, мобильный, неприхотливый и простой в эксплуатации источник независимого электроснабжения. Бензогенератор может применяться на даче, в гараже, для уличной торговли или летнего кафе, а также, при выездах в автопутешествия с палатками или на рыбалку.</description>
+			<shortDescription>Однофазный бензиновый генератор TSS SGG 2000N совершенно незаменим для множества ситуаций, где требуется недорогой, мобильный, неприхотливый и простой в эксплуатации источник независимого электроснабжения.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-192159680893-benzogenerator-tss-sgg-2000n</url>
+		</offer>
+		<offer id="829948654693">
+			<name>Бензогенератор инверторный ТСС SGG 2400Si</name>
+			<vendor>ТСС</vendor>
+			<price>36990</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>780518169663</categoryId>
+			<picture>https://static.tildacdn.com/stor6266-6139-4037-a136-376131323966/3388d1630be37576bbb7ae815a4ed086.webp</picture>
+			<description>Бензогенератор инверторный SGG 2400Si в шумопоглащающем кожухе, мощностью до 2,0 кВт. Переносной компактный, предназначен для питания маломощных электроприборов на загородном участке, в походе, на рыбалке.</description>
+			<shortDescription>Бензогенератор инверторный SGG 2400Si в шумопоглащающем кожухе, мощностью до 2,0 кВт. Переносной компактный, предназначен для питания маломощных электроприборов на загородном участке, в походе, на рыбалке.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-829948654693-benzogenerator-invertornii-tss-sgg-2400s</url>
+		</offer>
+		<offer id="684206118063">
+			<name>Бензогенератор ТСС SGG 2800N</name>
+			<vendor>ТСС</vendor>
+			<price>19170</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>141015326003</categoryId>
+			<picture>https://static.tildacdn.com/stor6462-6664-4239-b234-353866346166/dd85b125e52f2dc70c1165f80316713f.webp</picture>
+			<description>Бензиновый генератор TSS SGG 2800N предназначен для выработки электроэнергии с основными характеристиками: напряжение - 220 вольт, частота 50 Гц и номинальной мощностью 2.8 кВт. Для удобства передвижения можно дополнительно укомплектовать колесным комплектом и ручками (артикул 029623).</description>
+			<shortDescription>Бензиновый генератор TSS SGG 2800N предназначен для выработки электроэнергии с основными характеристиками: напряжение - 220 вольт, частота 50 Гц и номинальной мощностью 2.8 кВт.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-684206118063-benzogenerator-tss-sgg-2800n</url>
+		</offer>
+		<offer id="886346287983">
+			<name>Бензогенератор ТСС SGG 2800EN</name>
+			<vendor>ТСС</vendor>
+			<price>20241</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>141015326003</categoryId>
+			<picture>https://static.tildacdn.com/stor3564-6532-4464-a164-363233303761/27e8d0383a7e96ce3bf70ee3e2c9f172.webp</picture>
+			<description>Бензогенератор с с электростартом TSS SGG 2800EN предназначен для выработки электроэнергии с основными характеристиками: напряжение - 220 вольт, частота 50 Гц и номинальной мощностью 2.8 кВт. Для удобства передвижения можно дополнительно укомплектовать колесным комплектом и ручками (029623).</description>
+			<shortDescription>Бензогенератор с с электростартом TSS SGG 2800EN предназначен для выработки электроэнергии с основными характеристиками: напряжение - 220 вольт, частота 50 Гц и номинальной мощностью 2.8 кВт.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-886346287983-benzogenerator-tss-sgg-2800en</url>
+		</offer>
+		<offer id="835109888723">
+			<name>Бензогенератор инверторный ТСС SGG 3000Si</name>
+			<vendor>ТСС</vendor>
+			<price>45023</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>780518169663</categoryId>
+			<picture>https://static.tildacdn.com/stor6165-6631-4432-b334-363233313336/11fc0cad2e13669f5bd7562e84cf34a0.webp</picture>
+			<description>Мощность и области применения
+Бензогенератор инверторный SGG 3000Si в шумопоглащающем кожухе, предназначен для подключения к нему потребителей тока общей максимальной мощностью до 3,0 кВт. Переносной компактный инверторный генератор предназначен для питания электроприборов на загородном участке, в походе, на рыбалке.</description>
+			<shortDescription>Мощность и области применения Бензогенератор инверторный SGG 3000Si в шумопоглащающем кожухе, предназначен для подключения к нему потребителей тока общей максимальной мощностью до 3,0 кВт.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-835109888723-benzogenerator-invertornii-tss-sgg-3000s</url>
+		</offer>
+		<offer id="733588524733">
+			<name>Бензогенератор инверторный ТСС SGG 3000ESi (Запуск с кнопки)</name>
+			<vendor>ТСС</vendor>
+			<price>53865</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>780518169663</categoryId>
+			<picture>https://static.tildacdn.com/stor3236-3034-4431-a531-643063376230/6cba92c48518d381a0571939a129128a.webp</picture>
+			<description>Бензогенератор инверторный SGG 3000ESi в шумопоглащающем кожухе, с электростартом, предназначен для подключения к нему потребителей тока общей номинальной мощностью 2,8 кВт. Переносной компактный инверторный генератор предназначен для питания электроприборов, на загородном участке, в походе, на рыбалке.</description>
+			<shortDescription>Бензогенератор инверторный SGG 3000ESi в шумопоглащающем кожухе, с электростартом, предназначен для подключения к нему потребителей тока общей номинальной мощностью 2,8 кВт.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-733588524733-benzogenerator-invertornii-tss-sgg-3000e</url>
+		</offer>
+		<offer id="770814014693">
+			<name>Бензогенератор ТСС SGG 3200EN Duplex</name>
+			<vendor>ТСС</vendor>
+			<price>40905</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>141015326003</categoryId>
+			<picture>https://static.tildacdn.com/stor3438-6666-4862-a336-393564393466/119cccfa9abb4ee988e18142adcf626c.webp</picture>
+			<description>Бензиновый генератор с электростартом TSS SGG 3200EN Duplex при номинальной мощности равной 3,2 кВ, обеспечивает кратковременную пусковую мощность до 9 кВт (имеются в виду только пусковые токи высоконагруженных потребителей). Генератор DUPLEX вытягивает самых тяжелых индуктивных потребителей, это его отличительная особенность. Предназначен для выработки электроэнергии с основными характеристиками: напряжение - 220 вольт, частота 50 Гц.</description>
+			<shortDescription>Бензиновый генератор с электростартом TSS SGG 3200EN Duplex при номинальной мощности равной 3,2 кВ, обеспечивает кратковременную пусковую мощность до 9 кВт (имеются в виду только пусковые токи высоконагруженных потребителей).</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-770814014693-benzogenerator-tss-sgg-3200en-duplex</url>
+		</offer>
+		<offer id="619269039813">
+			<name>Бензогенератор инверторный ТСС SGG 3800Ei</name>
+			<vendor>ТСС</vendor>
+			<price>47520</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>780518169663</categoryId>
+			<picture>https://static.tildacdn.com/stor6632-3735-4331-a233-336538613961/c66b21f0ff71fd9fefd42b7f01dca2b8.webp</picture>
+			<description>Бензогенератор инверторный SGG 3800Ei предназначен для подключения к нему потребителей тока общей номинальной мощностью 3,6 кВт. Компактный инверторный генератор предназначен для питания маломощных электроприборов на загородном участке, в походе, на рыбалке. Выход 12 вольт позволяет подзарядить автомобильный аккумулятор в экстренном случае.</description>
+			<shortDescription>Бензогенератор инверторный SGG 3800Ei предназначен для подключения к нему потребителей тока общей номинальной мощностью 3,6 кВт.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-619269039813-benzogenerator-invertornii-tss-sgg-3800e</url>
+		</offer>
+		<offer id="880103751723">
+			<name>Бензогенератор инверторный ТСС SGG 4200Ei</name>
+			<vendor>ТСС</vendor>
+			<price>57915</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>780518169663</categoryId>
+			<picture>https://static.tildacdn.com/stor6264-6563-4238-a530-346538643537/75c0e2fa4a82f544a6925eaf89f60247.webp</picture>
+			<description>Бензогенератор инверторный SGG 4200Ei с электростартом и разъемом для подключения блока автоматики, вырабатывает электричество с высокой точностью частоты и напряжения. Предназначен для подключения к нему потребителей общей номинальной мощностью до 4,2 кВт. Позволяет подключать к генератору как обычных потребителей, так и точное электронное оборудование, например, ноутбуки, LCD-телевизоры или смартфон.</description>
+			<shortDescription>Бензогенератор инверторный SGG 4200Ei с электростартом и разъемом для подключения блока автоматики, вырабатывает электричество с высокой точностью частоты и напряжения.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-880103751723-benzogenerator-invertornii-tss-sgg-4200e</url>
+		</offer>
+		<offer id="728364071533">
+			<name>Бензогенератор инверторный ТСС SGG 4500ESi</name>
+			<vendor>ТСС</vendor>
+			<price>74952</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>780518169663</categoryId>
+			<picture>https://static.tildacdn.com/stor6435-3035-4734-a139-643265653233/5e503f686a49fe58ac6482267e55ead2.webp</picture>
+			<description>Бензогенератор инверторный SGG 4500ESi в шумопоглащающем кожухе предназначен для подключения к нему потребителей тока общей максимальной мощностью до 4,5 кВт. Переносной компактный инверторный генератор предназначен для питания маломощных электроприборов на загородном участке, в походе, на рыбалке.</description>
+			<shortDescription>Бензогенератор инверторный SGG 4500ESi в шумопоглащающем кожухе предназначен для подключения к нему потребителей тока общей максимальной мощностью до 4,5 кВт.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-728364071533-benzogenerator-invertornii-tss-sgg-4500e</url>
+		</offer>
+		<offer id="759593092613">
+			<name>Бензогенератор 5 кВт ТСС SGG 5000EHNA</name>
+			<vendor>ТСС</vendor>
+			<price>64665</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>141015326003</categoryId>
+			<picture>https://static.tildacdn.com/stor3533-6130-4564-b736-653761626562/7c37c1229f14105f56644e6a493845bf.webp</picture>
+			<description>Бензогенератор с электростартом и с разъемом для подключения блока автоматики. TSS SGG 5000ENA предназначен для выработки электроэнергии с основными характеристиками: напряжение - 220 вольт, частота 50 Гц и номинальной мощностью 5 кВт.
+Бензогенератор может применяться на даче, в гараже, строительстве, для уличной торговли или летнего кафе, а также, при выездах в автопутешествия с палатками или на рыбалку. Электрогенератор бензиновый работает на бензине АИ-92. Рекомендуемое к эксплуатации масло SAE 10W30.</description>
+			<shortDescription>Бензогенератор с электростартом и с разъемом для подключения блока автоматики. TSS SGG 5000ENA предназначен для выработки электроэнергии с основными характеристиками: напряжение - 220 вольт, частота 50 Гц и номинальной мощностью 5 кВт.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-759593092613-benzogenerator-5-kvt-tss-sgg-5000ehna</url>
+		</offer>
+		<offer id="126853463623">
+			<name>Бензогенератор ТСС SGG 5000EHNA Duplex</name>
+			<vendor>ТСС</vendor>
+			<price>64800</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>141015326003</categoryId>
+			<picture>https://static.tildacdn.com/stor6263-3166-4432-b065-616530656235/a69cf6548cf02c112263d3a60d03e164.webp</picture>
+			<description>Бензогенератор с электростартом и с разъемом для подключения блока автоматики. TSS SGG 5000ENA предназначен для выработки электроэнергии с основными характеристиками: напряжение - 220 вольт, частота 50 Гц и номинальной мощностью 5 кВт.
+Бензогенератор может применяться на даче, в гараже, строительстве, для уличной торговли или летнего кафе, а также, при выездах в автопутешествия с палатками или на рыбалку.
+Электрогенератор бензиновый работает на бензине АИ-92. Рекомендуемое к эксплуатации масло SAE 10W30.</description>
+			<shortDescription>Бензогенератор с электростартом и с разъемом для подключения блока автоматики. TSS SGG 5000ENA предназначен для выработки электроэнергии с основными характеристиками: напряжение - 220 вольт, частота 50 Гц и номинальной мощностью 5 кВт.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-126853463623-benzogenerator-tss-sgg-5000ehna-duplex</url>
+		</offer>
+		<offer id="209727335383">
+			<name>Бензогенератор инверторный 5 кВт ТСС SGG 5000Ei</name>
+			<vendor>ТСС</vendor>
+			<price>66015</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>780518169663</categoryId>
+			<picture>https://static.tildacdn.com/stor3933-6139-4166-b565-383432616366/b25b45017a36c1dfe7fa0e100cdfd4a9.webp</picture>
+			<description>Бензогенератор инверторный SGG 2400Si в шумопоглащающем кожухе, предназначен для подключения к нему потребителей тока общей максимальной мощностью до 2,0 кВт.
+Переносной компактный инверторный генератор предназначен для питания маломощных электроприборов на загородном участке, в походе, на рыбалке.</description>
+			<shortDescription>Бензогенератор инверторный SGG 2400Si в шумопоглащающем кожухе, предназначен для подключения к нему потребителей тока общей максимальной мощностью до 2,0 кВт.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-209727335383-benzogenerator-invertornii-5-kvt-tss-sgg</url>
+		</offer>
+		<offer id="517765336963">
+			<name>Бензогенератор инверторный 5 кВт ТСС SGG 5000ESi</name>
+			<vendor>ТСС</vendor>
+			<price>94770</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>780518169663</categoryId>
+			<picture>https://static.tildacdn.com/stor3661-3539-4435-b432-313730343633/780433336e80e5ce77fab36819883875.webp</picture>
+			<description>Бензогенератор инверторный SGG 5000ESi в шумопоглащающем кожухе, с электростартом и разъемом для подключения блока автоматики, вырабатывает электричество высокой точности частоты и напряжения.
+Предназначен для подключения к нему потребителей общей номинальной мощностью до 5,0 кВт. Позволяет напрямую подключать к генератору как обычных потребителей, так и точное электронное оборудование, например, ноутбуки, LCD-телевизоры или смартфон.</description>
+			<shortDescription>Бензогенератор инверторный SGG 5000ESi в шумопоглащающем кожухе, с электростартом и разъемом для подключения блока автоматики, вырабатывает электричество высокой точности частоты и напряжения.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-517765336963-benzogenerator-invertornii-5-kvt-tss-sgg</url>
+		</offer>
+		<offer id="939808729253">
+			<name>Бензогенератор ТСС SGG 6000EHNA Duplex</name>
+			<vendor>ТСС</vendor>
+			<price>67230</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>141015326003</categoryId>
+			<picture>https://static.tildacdn.com/stor3865-3437-4965-b432-326636386435/57f745b4f8ff0e55aa63d7c390c049b4.webp</picture>
+			<description>Бензогенератор с электростартером и с разъемом для подключения блока автоматики. TSS SGG 6000ENA Duplex при номинальной мощности равной 6,0 кВт, обеспечивает кратковременную пусковую мощность до 15 кВт (имеются в виду только пусковые токи высоконагруженных потребителей).
+Генератор DUPLEX вытягивает самых тяжелых индуктивных потребителей, это его отличительная особенность, предназначен для выработки электроэнергии с основными характеристиками: напряжение - 220 вольт, частота 50 Гц и номинальной мощностью 6 кВт.
+Бензогенератор может применяться на даче, в гараже, строительстве, для уличной торговли или летнего кафе, а также, при выездах в автопутешествия с палатками или на рыбалку. Электрогенератор бензиновый работает на бензине АИ-92. Рекомендуемое к эксплуатации масло SAE 10W30.
+Однофазный бензиновый генератор ТСС совершенно незаменим для множества ситуаций, где требуется недорогой, мобильный, неприхотливый и простой в эксплуатации источник независимого электроснабжения.</description>
+			<shortDescription>Бензогенератор с электростартером и с разъемом для подключения блока автоматики.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-939808729253-benzogenerator-tss-sgg-6000ehna-duplex</url>
+		</offer>
+		<offer id="490190651833">
+			<name>Гибридный генератор TSS DF 6500EHNA Duplex</name>
+			<vendor>ТСС</vendor>
+			<price>70470</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>594805333963</categoryId>
+			<picture>https://static.tildacdn.com/stor3033-3638-4238-a262-616566346130/15f76faa282852566ab6a0a1b75fd79b.webp</picture>
+			<description>Гибридный генератор SGG 6000EHNA Duplex - бензиновая модель с электростартером и с разъемом для подключения блока автоматики. Бензогенератор может применяться на даче, в гараже, строительстве, для уличной торговли или летнего кафе, а также, при выездах в автопутешествия с палатками или на рыбалку. Электрогенератор бензиновый работает на бензине АИ-92. Рекомендуемое к эксплуатации масло SAE 10W30.</description>
+			<shortDescription>Гибридный генератор SGG 6000EHNA Duplex - бензиновая модель с электростартером и с разъемом для подключения блока автоматики.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-490190651833-gibridnii-generator-tss-df-6500ehna-dupl</url>
+		</offer>
+		<offer id="284483807633">
+			<name>Бензогенератор ТСС SGG 6000EH3NA</name>
+			<vendor>ТСС</vendor>
+			<price>82459</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>141015326003</categoryId>
+			<picture>https://static.tildacdn.com/stor3565-6461-4034-b364-316163303935/505bab1a8873bb039c355bd6f46853a3.webp</picture>
+			<description>Трехфазный бензиновый генератор TSS SGG 6000E3NA с электростартером и разъемом для подключения блока автоматики, предназначен для выработки электроэнергии с основными характеристиками: напряжение 230-400 вольт, частота 50 Гц и номинальной мощностью 6 кВт.</description>
+			<shortDescription>Трехфазный бензиновый генератор TSS SGG 6000E3NA с электростартером и разъемом для подключения блока автоматики, предназначен для выработки электроэнергии с основными характеристиками: напряжение 230-400 вольт</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-284483807633-benzogenerator-tss-sgg-6000eh3na</url>
+		</offer>
+		<offer id="463414271583">
+			<name>Бензогенератор инверторный ТСС SGG 6000Ei</name>
+			<vendor>ТСС</vendor>
+			<price>83468</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>780518169663</categoryId>
+			<picture>https://static.tildacdn.com/stor3935-6139-4535-a164-353038633039/98b66afafbc900fb84c6d800ab2eca30.webp</picture>
+			<description>Бензогенератор инверторный SGG 6000Ei с электростартом, коннекотором для подключения АВР, укомплектован колесным комплетом для удобства перемещения. Инверторный генератор считается оптимальным выбором для нагрузки, чувствительной к качеству тока — такой, как аудиотехника или телевизор.</description>
+			<shortDescription>Бензогенератор инверторный SGG 6000Ei с электростартом, коннекотором для подключения АВР, укомплектован колесным комплетом для удобства перемещения.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-463414271583-benzogenerator-invertornii-tss-sgg-6000e</url>
+		</offer>
+		<offer id="840219257943">
+			<name>Бензогенератор инверторный ТСС SGG 6000ESi</name>
+			<vendor>ТСС</vendor>
+			<price>119725</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>780518169663</categoryId>
+			<picture>https://static.tildacdn.com/stor6162-3938-4933-b066-343761383135/3c469956c65af01298dbf749c5f4b0c8.webp</picture>
+			<description>Бензиновый генератор инверторный SGG 6000ESi однофазный с электростартером, 6 кВт, 230В – это современное и высокотехнологичное решение для обеспечения надежного электропитания в условиях отсутствия доступа к централизованной сети. Благодаря инверторной технологии, этот генератор обеспечивает стабильное и чистое электричество, идеально подходящее для питания чувствительной электроники, такой как компьютеры, ноутбуки и медицинское оборудование.</description>
+			<shortDescription>Бензиновый генератор инверторный SGG 6000ESi однофазный с электростартером, 6 кВт, 230В – это современное и высокотехнологичное решение для обеспечения надежного электропитания в условиях отсутствия доступа к централизованной сети.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-840219257943-benzogenerator-invertornii-tss-sgg-6000e</url>
+		</offer>
+		<offer id="910394681183">
+			<name>Бензогенератор инверторный ТСС SGG 7000Ei</name>
+			<vendor>ТСС</vendor>
+			<price>84902</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>780518169663</categoryId>
+			<picture>https://static.tildacdn.com/stor6338-6433-4166-a661-616534336339/0e0a470d328a4fb49959782588a6855c.webp</picture>
+			<description>Профессиональный инверторный бензиновый генератор TSS SGG 7000Ei, с электростартом и разъемом для подключения блока автоматики. Мощный инверторный генератор обеспечивает идеальное качество тока, дает возможность подключения напрямую электронных устройств, без стабилизатора.</description>
+			<shortDescription>Профессиональный инверторный бензиновый генератор TSS SGG 7000Ei, с электростартом и разъемом для подключения блока автоматики.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-910394681183-benzogenerator-invertornii-tss-sgg-7000e</url>
+		</offer>
+		<offer id="896308998653">
+			<name>Бензогенератор ТСС SGG 8000EH3NA</name>
+			<vendor>ТСС</vendor>
+			<price>87182</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>141015326003</categoryId>
+			<picture>https://static.tildacdn.com/stor3835-3537-4665-b230-306234383434/2ec8bd7a180c9cde166c845cf26fcb36.webp</picture>
+			<description>Бензогенератор трехфазный мощностью 7,8 кВт 8000 EH3NA (с электростартом ) предназначен для выработки электроэнергии с основными характеристиками: напряжение 400/230 вольт, частота 50 Гц, оснащенный колесным комплектом и ручками, для удобства передвижения.</description>
+			<shortDescription>Бензогенератор трехфазный мощностью 7,8 кВт 8000 EH3NA (с электростартом ) предназначен для выработки электроэнергии с основными характеристиками: напряжение 400/230 вольт, частота 50 Гц, оснащенный колесным комплектом и ручками</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-896308998653-benzogenerator-tss-sgg-8000eh3na</url>
+		</offer>
+		<offer id="257962436103">
+			<name>Источник бесперебойного питания ИБП Hiden Control HPS20-0612</name>
+			<vendor>Hiden Control</vendor>
+			<price>16800</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>259723601923</categoryId>
+			<picture>https://static.tildacdn.com/stor3864-3665-4466-b232-316131306363/4c3892a42b3bce2e909a6c6b1f11ca78.webp</picture>
+			<description>Модель HPS20-0612 отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой.</description>
+			<shortDescription>Модель HPS20-0612 отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-257962436103-istochnik-bespereboinogo-pitaniya-ibp-hi</url>
+		</offer>
+		<offer id="222290416283">
+			<name>Источник бесперебойного питания ИБП Hiden Control HPS20-1012</name>
+			<vendor>Hiden Control</vendor>
+			<price>21600</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>259723601923</categoryId>
+			<picture>https://static.tildacdn.com/stor3166-6265-4666-b966-366432346566/a8bfeb91fa8adfd5825316a2a882c868.webp</picture>
+			<description>Модель HPS20-1012 отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой.</description>
+			<shortDescription>Модель HPS20-1012 отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-222290416283-istochnik-bespereboinogo-pitaniya-ibp-hi</url>
+		</offer>
+		<offer id="558739836513">
+			<name>Источник бесперебойного питания ИБП Hiden Control HPS20-0312N</name>
+			<vendor>Hiden Control</vendor>
+			<price>15300</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>259723601923</categoryId>
+			<picture>https://static.tildacdn.com/stor3534-3330-4735-b263-303039613761/2a09b9c1632e7dccbdb470c1227119aa.webp</picture>
+			<description>Модель HPS20-0312N отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой. Получите расчет комплекта под конкретную нагрузку.</description>
+			<shortDescription>Модель HPS20-0312N отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-558739836513-istochnik-bespereboinogo-pitaniya-ibp-hi</url>
+		</offer>
+		<offer id="370539366173">
+			<name>Источник бесперебойного питания ИБП Hiden Control HPS20-0612N</name>
+			<vendor>Hiden Control</vendor>
+			<price>18000</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>259723601923</categoryId>
+			<picture>https://static.tildacdn.com/stor3363-6135-4764-a639-356364633764/bb7834d4d5ccee50bfd16438c611db53.webp</picture>
+			<description>Модель HPS20-0612N отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой.</description>
+			<shortDescription>Модель HPS20-0612N отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-370539366173-istochnik-bespereboinogo-pitaniya-ibp-hi</url>
+		</offer>
+		<offer id="956085436843">
+			<name>Источник бесперебойного питания ИБП Hiden Control HPS20-1012N</name>
+			<vendor>Hiden Control</vendor>
+			<price>23400</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>259723601923</categoryId>
+			<picture>https://static.tildacdn.com/stor6238-3066-4263-a363-623839353734/72080c8fe07053fa51f43d87d4662910.webp</picture>
+			<description>Модель HPS20-1012N отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Линейно-интерактивный источник с чистым синусом. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой.</description>
+			<shortDescription>Модель HPS20-1012N отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Линейно-интерактивный источник с чистым синусом.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-956085436843-istochnik-bespereboinogo-pitaniya-ibp-hi</url>
+		</offer>
+		<offer id="542759818673">
+			<name>Источник бесперебойного питания ИБП Hiden Control HPS20-0312</name>
+			<vendor>Hiden Control</vendor>
+			<price>13900</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>259723601923</categoryId>
+			<picture>https://static.tildacdn.com/stor6233-3033-4835-a566-326262656237/475021cd7a53365c028b5bd0de8f61e9.webp</picture>
+			<description>Модель HPS20-0312 отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой. Получите расчет комплекта под конкретную нагрузку.</description>
+			<shortDescription>Модель HPS20-0312 отличается компактным форм-фактором, интуитивно понятным ЖК-дисплеем для контроля состояния и простотой установки. Подходит для котлов, насосов, освещения, связи и бытовой техники с чувствительной электроникой.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-542759818673-istochnik-bespereboinogo-pitaniya-ibp-hi</url>
+		</offer>
+		<offer id="166651400853">
+			<name>Газовый генератор Steinmets 7000 E</name>
+			<vendor>Steinmets</vendor>
+			<price>285000</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>594805333963</categoryId>
+			<picture>https://static.tildacdn.com/stor3961-3038-4764-b134-326432316463/1d8efca8da02f858502a37e69c95d324.webp</picture>
+			<description>Газовый генератор Steinmets 7000 E на 6 кВт номинальной и 6.5 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель EVOline GB 420 E с электростартером. Подходит как резервный источник питания для дома, котельной и небольшого магазина: не нужно хранить бензин, а ресурс мотора выше, чем у бензиновых аналогов.</description>
+			<shortDescription>Газовый генератор Steinmets 7000 E на 6 кВт номинальной и 6.5 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель EVOline GB 420 E с электростартером.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-166651400853-gazovii-generator-steinmets-7000-e</url>
+		</offer>
+		<offer id="804701454053">
+			<name>Газовый генератор Steinmets 9000 E</name>
+			<vendor>Steinmets</vendor>
+			<price>305000</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>594805333963</categoryId>
+			<picture>https://static.tildacdn.com/stor3663-3533-4762-b034-613135356136/4534953f4574ec9cc4ef43c338e72027.webp</picture>
+			<description>Газовый генератор Steinmets 9000 E на 8 кВт номинальной и 8.5 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель EVOline GB 460 E с электростартером. Подходит как резервный источник питания для дома, котельной и небольшого магазина: не нужно хранить бензин, а ресурс мотора выше, чем у бензиновых аналогов.</description>
+			<shortDescription>Газовый генератор Steinmets 9000 E на 8 кВт номинальной и 8.5 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель EVOline GB 460 E с электростартером.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-804701454053-gazovii-generator-steinmets-9000-e</url>
+		</offer>
+		<offer id="729352154283">
+			<name>Газовый генератор Steinmets 6000 EH</name>
+			<vendor>Steinmets</vendor>
+			<price>305000</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>594805333963</categoryId>
+			<picture>https://static.tildacdn.com/stor6435-6533-4564-b438-613433306331/e74bbfa9f1ce84e004d7b238e258a2bb.webp</picture>
+			<description>Газовый генератор Steinmets 6000 EH на 5 кВт номинальной и 5.5 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель Honda GX 390 с электростартером. Подходит как резервный источник питания для дома, котельной и небольшого магазина: не нужно хранить бензин, а ресурс мотора выше, чем у бензиновых аналогов.</description>
+			<shortDescription>Газовый генератор Steinmets 6000 EH на 5 кВт номинальной и 5.5 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель Honda GX 390 с электростартером.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-729352154283-gazovii-generator-steinmets-6000-eh</url>
+		</offer>
+		<offer id="624511014233">
+			<name>Газовый генератор Steinmets 12000 E</name>
+			<vendor>Steinmets</vendor>
+			<price>455000</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>594805333963</categoryId>
+			<picture>https://static.tildacdn.com/stor3333-6230-4733-b938-643765653862/34cec498f72dc2b355ed538b9b7cfbf7.webp</picture>
+			<description>Газовый генератор Steinmets 12000 E на 10 кВт номинальной и 11 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель EVOline GB 680 E с электростартером. Подходит как резервный источник питания для дома, котельной и небольшого магазина: не нужно хранить бензин, а ресурс мотора выше, чем у бензиновых аналогов.</description>
+			<shortDescription>Газовый генератор Steinmets 12000 E на 10 кВт номинальной и 11 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель EVOline GB 680 E с электростартером.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-624511014233-gazovii-generator-steinmets-12000-e</url>
+		</offer>
+		<offer id="712531878033">
+			<name>Газовый генератор Steinmets 15000 E</name>
+			<vendor>Steinmets</vendor>
+			<price>491000</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>594805333963</categoryId>
+			<picture>https://static.tildacdn.com/stor3832-3038-4633-a536-623266633931/72f131586ddce43e0ce4311e1a2905c7.webp</picture>
+			<description>Газовый генератор Steinmets 15000 E на 12 кВт номинальной и 13 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель EVOline GB 750 E с электростартером. Подходит как резервный источник питания для дома, котельной и небольшого магазина: не нужно хранить бензин, а ресурс мотора выше, чем у бензиновых аналогов.</description>
+			<shortDescription>Газовый генератор Steinmets 15000 E на 12 кВт номинальной и 13 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель EVOline GB 750 E с электростартером.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-712531878033-gazovii-generator-steinmets-15000-e</url>
+		</offer>
+		<offer id="622020866183">
+			<name>Газовый генератор Steinmets 10000 EH</name>
+			<vendor>Steinmets</vendor>
+			<price>505000</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>594805333963</categoryId>
+			<picture>https://static.tildacdn.com/stor3838-6464-4361-b030-663639313563/e3f9a24862f6a25337e376be1d2b3a2e.webp</picture>
+			<description>Газовый генератор Steinmets 10000 EH на 10 кВт номинальной и 11 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель Honda GX 630 с электростартером. Подходит как резервный источник питания для дома, котельной и небольшого магазина: не нужно хранить бензин, а ресурс мотора выше, чем у бензиновых аналогов.</description>
+			<shortDescription>Газовый генератор Steinmets 10000 EH на 10 кВт номинальной и 11 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель Honda GX 630 с электростартером.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-622020866183-gazovii-generator-steinmets-10000-eh</url>
+		</offer>
+		<offer id="338885935443">
+			<name>Газовый генератор Steinmets 12000 EH</name>
+			<vendor>Steinmets</vendor>
+			<price>530000</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>594805333963</categoryId>
+			<picture>https://static.tildacdn.com/stor6537-3133-4239-a132-663432303538/48f88f91ed75775cfb0fd128f040fcff.webp</picture>
+			<description>Газовый генератор Steinmets 12000 EH на 11 кВт номинальной и 12 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель Honda GX 690 с электростартером. Подходит как резервный источник питания для дома, котельной и небольшого магазина: не нужно хранить бензин, а ресурс мотора выше, чем у бензиновых аналогов.</description>
+			<shortDescription>Газовый генератор Steinmets 12000 EH на 11 кВт номинальной и 12 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель Honda GX 690 с электростартером.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-338885935443-gazovii-generator-steinmets-12000-eh</url>
+		</offer>
+		<offer id="362178044733">
+			<name>Газовый генератор Steinmets 18000 E</name>
+			<vendor>Steinmets</vendor>
+			<price>561000</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>594805333963</categoryId>
+			<picture>https://static.tildacdn.com/stor6362-6566-4830-b766-373861663266/21f7a2fe389e4e1d81d8d97425d0a811.webp</picture>
+			<description>Газовый генератор Steinmets 18000 E на 15 кВт номинальной и 16 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель EVOline GB 1000 с электростартером. Подходит как резервный источник питания для дома, котельной и небольшого магазина: не нужно хранить бензин, а ресурс мотора выше, чем у бензиновых аналогов.</description>
+			<shortDescription>Газовый генератор Steinmets 18000 E на 15 кВт номинальной и 16 кВт максимальной мощности, однофазный, в шумозащитном кожухе. Работает на магистральном природном газе и на сжиженном газе из баллона, двигатель EVOline GB 1000 с электростартером.</shortDescription>
+			<url>https://elektromontazhnik64.ru/generatory-i-ibp/tproduct/3293272201-362178044733-gazovii-generator-steinmets-18000-e</url>
+		</offer>
+		</offers>
+	</shop>
+</yml_catalog>
