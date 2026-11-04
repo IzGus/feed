@@ -4,8 +4,8 @@ YML-фиды магазина «Электромонтажник» для Янд
 - elektromontazhnik_tovary.xml — Яндекс Товары / Вебмастер: https://izgus.github.io/feed/elektromontazhnik_tovary.xml
 - elektromontazhnik_business.xml — Яндекс Бизнес (прайс-лист профиля): https://izgus.github.io/feed/elektromontazhnik_business.xml
 
-Источник — открытое API каталога Тильды (все разделы). В фиде Директа пока только генераторы
-(DIRECT_ROOTS в скрипте), в Товарах и Бизнесе — весь каталог.
+Источник — открытое API каталога Тильды. Во всех трех фидах весь каталог (у кампании Директа на генераторы
+стоит фильтр по категории).
 
 Каждый день в 06:00 по Москве GitHub Actions пересобирает фиды копией скрипта direct_feed.py.
 
