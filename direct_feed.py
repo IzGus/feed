@@ -1,42 +1,46 @@
 # -*- coding: utf-8 -*-
 """
-Адаптация YML-фида Тильды под Яндекс Директ и Яндекс Товары (Вебмастер).
+Фиды каталога elektromontazhnik64.ru для Яндекс Директа, Яндекс Товаров и Яндекс Бизнеса.
 
-Вход:  фид Тильды по ссылке FEED_URL (или локальная копия через --from-file)
-       список товаров и разделов каталога через открытое API Тильды PARTS_URL
-       (или локальная копия JSON через --parts-file)
-Выход: Яндекс Директ/feeds/elektromontazhnik_direct.yml  — для Директа (ЕПК)
-       Яндекс Директ/feeds/elektromontazhnik_tovary.xml  — для Яндекс Товаров
-       (то, что раньше было «Товары и цены» в Вебмастере; merchants.yandex.ru)
-       Яндекс Директ/feeds/elektromontazhnik_business.xml — для Яндекс Бизнеса
-       (прайс-лист профиля компании и рекламная подписка)
+Источник — открытое API каталога Тильды (один запрос отдает все товары и дерево разделов):
+  https://store.tildaapi.com/api/getproductslist/?storepartuid=932478714073&recid=3293272201&getparts=true
+До 04.11.2026 скрипт правил YML-выгрузку Тильды, но она отдает только раздел «Генераторы»
+(настройку выгрузки через MCP прочитать не удалось), а поля YML один в один есть в API:
+name = title, description = короткий текст, picture = gallery, param = характеристики, url, vendorCode = sku.
+id офферов прежние (uid товара Тильды), так что статистика в Директе не теряется.
 
-Общее для обоих фидов:
-  1. В <categories> добавляются подразделы Тильды с parentId на родительский раздел.
-  2. У каждого <offer> <categoryId> меняется на подраздел.
-Только для Директа (target=direct):
-  3. У офферов добавляются два <collectionId> (подраздел и родитель), после </offers>
-     идет <collections> — страницы каталога для ЕПК.
-Только для Яндекс Товаров (target=tovary), по справке merchants/ru/features и offers:
-  3. Убирается <manufacturer_warranty> (Товары его не рекомендуют), у офферов ставится
-     available="true", в date подставляется время сборки (файл не старше 10 дней). Расширение .xml, чтобы GitHub Pages отдавал text/xml — text/yaml Товары не принимают.
-Все остальное в фиде (шапка, офферы, param) не трогается — обработка текстовая,
-чтобы не ломать CDATA и форматирование Тильды.
-Для Яндекс Бизнеса (target=business) файл собирается заново по справке
-business-priority/ru/manage/price-list (раздел «Загрузка файла YML»): плоские категории
-(подразделы без parentId), у оффера только name, vendor, price, currencyId=RUB, categoryId,
-одна picture, description без HTML, shortDescription до 250 знаков, url.
+Выход (по умолчанию «Яндекс Директ/feeds», в GitHub Actions — --out-dir .):
+  elektromontazhnik_direct.yml   — Директ (ЕПК): дерево категорий, у оффера два <collectionId>
+                                   (подраздел и раздел), после </offers> — <collections>: страницы разделов
+                                   и подразделов каталога (справка direct/feeds/requirements-yml, «Каталоги»);
+  elektromontazhnik_tovary.xml   — Яндекс Товары (merchants.yandex.ru): без collections и manufacturer_warranty,
+                                   available="true", date = время сборки (файл не старше 10 дней), .xml — чтобы
+                                   GitHub Pages отдавал text/xml;
+  elektromontazhnik_business.xml — Яндекс Бизнес (business-priority/ru/manage/price-list, «Загрузка файла YML»):
+                                   плоские категории, RUB, одна picture, vendor обязателен, description без HTML
+                                   до 3000, shortDescription до 250.
+
+Категория оффера — подраздел, а если его нет (Мотопомпы, Снегоуборщики) — раздел.
+Тексты каталогов Директа — SECTIONS и SUBS ниже (без «ё», без брендов: страницы разделов — направления,
+бренды там не называем; диапазоны сверены с характеристиками товаров 04.11.2026).
+Новый раздел или подраздел в Тильде без текста попадает в фид с названием «<раздел> в Балашове»
+и предупреждением — текст нужно дописать сюда.
+
+DIRECT_ROOTS — какие разделы идут в фид Директа. Решение владельца: в фид Директа идут все товары, нужное
+выбирается фильтрами кампаний; но пока у кампании на генераторы не стоит фильтр по категории, в фиде Директа
+только генераторы (Товары и Бизнес — все разделы). Когда фильтр стоит — DIRECT_ROOTS = None.
 
 Запуск: PYTHONIOENCODING=utf-8 python scripts/direct_feed.py [--target direct|tovary|business|all]
-        [--check-urls] [--publish] [--from-file feed.yml] [--parts-file parts.json] [--out путь.yml]
+        [--check-urls] [--publish] [--api-file catalog.json] [--out путь] [--out-dir папка]
 
---publish копирует результат и сам скрипт в репозиторий feed-github и делает git commit + push;
+--publish копирует фиды и сам скрипт в репозиторий feed-github и делает git commit + push;
 фиды публикуются на GitHub Pages: https://izgus.github.io/feed/<имя файла>.
 В репозитории GitHub Actions (.github/workflows/build.yml) раз в сутки запускает
 `python direct_feed.py --out-dir .` и коммитит результат, так что фиды обновляются сами.
 """
 import argparse
 import datetime
+import html
 import io
 import json
 import os
@@ -60,72 +64,128 @@ OUT_FILES = OrderedDict([
 REPO_DIR = os.path.join(ROOT, 'feed-github')   # локальный клон github.com/IzGus/feed
 PUBLIC_BASE = 'https://izgus.github.io/feed/'
 
-FEED_URL = 'https://elektromontazhnik64.ru/tstore/yml/1978c3209b2f0415073ecc572f15d09d.yml'
-STOREPART = '932478714073'   # uid каталога Тильды
-RECID = '3293272201'         # recid блока каталога на странице /generatory-i-ibp/
-PARTS_URL = ('https://store.tildaapi.com/api/getproductslist/?storepartuid=%s'
-             '&recid=%s&getparts=true&size=500&slice=1' % (STOREPART, RECID))
+SITE = 'https://elektromontazhnik64.ru'
+SHOP_NAME = 'Электромонтажник'
+COMPANY = 'Электромонтажник'
+CATALOG_UID = '932478714073'   # корень каталога Тильды (проект 443554)
+API_RECID = '3293272201'       # любой блок каталога; с корнем отдает все товары
+API_URL = ('https://store.tildaapi.com/api/getproductslist/?storepartuid=%s&recid=%s'
+           '&getparts=true&size=500&slice=%%d' % (CATALOG_UID, API_RECID))
 
-BASE = 'https://elektromontazhnik64.ru/generatory-i-ibp/'
-PARENT_UID = '286678031193'  # «Генераторы и резервное питание»
-# Картинка раздела в Тильде (800x800 png)
-PARENT_IMG = 'https://static.tildacdn.com/stor6232-3334-4732-a231-623862646362/8728266aa6fb7b8d9a4c234813d0dbe0.png'
+MAX_PICTURES = 5   # картинок на каталог Директа
+GEN = '286678031193'
+DIRECT_ROOTS = (GEN,)   # None — все разделы (после фильтра у кампании на генераторы)
 
-MAX_PICTURES = 5  # картинок на каталог
+TAIL = 'Самовывоз в Балашове, доставка по Саратовской области.'
 
-# Тексты каталогов (страниц) для Директа. Ключ — uid раздела Тильды.
-# Без буквы «ё». Ссылки подразделов проверены 09.09.2026: блок «Каталог» (t1291)
-# понимает только tfc_storepartnav с числовым uid подраздела.
-COLLECTIONS = OrderedDict([
-    (PARENT_UID, {
-        'url': BASE,
+# Разделы: страница с блоком каталога (recid — для ссылок на подразделы) и текст каталога Директа.
+SECTIONS = OrderedDict([
+    (GEN, {
+        'page': '/generatory-i-ibp/', 'recid': '3293272201',
         'name': 'Генераторы и ИБП в Балашове',
-        'description': ('Генераторы и источники бесперебойного питания для дома, '
-                        'объектов и производства. Подбор по параметрам. '
-                        'Самовывоз в Балашове и доставка по Саратовской области.'),
+        'description': 'Бензиновые, инверторные, газовые и дизельные генераторы от 1 до 17 кВт, '
+                       'ИБП для котлов и насосов. Подбор по мощности. ' + TAIL,
+        # картинка раздела в Тильде (800×800 png)
+        'picture': 'https://static.tildacdn.com/stor6232-3334-4732-a231-623862646362/8728266aa6fb7b8d9a4c234813d0dbe0.png',
     }),
-    ('780518169663', {
-        'name': 'Инверторные бензогенераторы в Балашове',
-        'description': ('Инверторные бензиновые генераторы ТСС от 1,2 до 6 кВт '
-                        'с чистой синусоидой для чувствительной электроники. '
-                        'Самовывоз в Балашове, доставка по Саратовской области.'),
+    ('178199766063', {
+        'page': '/motopompy/', 'recid': '5413909801',
+        'name': 'Мотопомпы в Балашове',
+        'description': 'Мотопомпы от 7 до 140 м³/ч для чистой и грязной воды, химических жидкостей '
+                       'и пожаротушения. ' + TAIL,
     }),
-    ('141015326003', {
-        'name': 'Бензиновые генераторы в Балашове',
-        'description': ('Бензиновые генераторы ТСС от 2 до 8 кВт, однофазные и '
-                        'трехфазные, с ручным и электрическим запуском. '
-                        'Самовывоз в Балашове, доставка по Саратовской области.'),
+    ('992980329813', {
+        'page': '/sadovaya-tehnika/', 'recid': '5414049001',
+        'name': 'Садовая и уборочная техника в Балашове',
+        'description': 'Газонокосилки, мотокосы, пилы, райдеры, кусторезы, воздуходувки, мойки, '
+                       'пылесосы и подметальные машины. ' + TAIL,
     }),
-    ('594805333963', {
-        'name': 'Газовые и гибридные генераторы в Балашове',
-        'description': ('Газовые генераторы Steinmets от 7 до 18 кВт и гибридные '
-                        'газ-бензин генераторы ТСС для дома и объектов. '
-                        'Самовывоз в Балашове, доставка по Саратовской области.'),
+    ('447434842163', {
+        'page': '/snegouborshchiki/', 'recid': '5414050801',
+        'name': 'Снегоуборщики в Балашове',
+        'description': 'Бензиновые и электрические снегоуборщики с шириной захвата от 33 до 81 см, '
+                       'на колесах и гусеницах. ' + TAIL,
     }),
-    ('259723601923', {
-        'name': 'Источники бесперебойного питания (ИБП) в Балашове',
-        'description': ('ИБП Hiden Control для газовых котлов, насосов и домашней '
-                        'техники с внешними аккумуляторами. '
-                        'Самовывоз в Балашове, доставка по Саратовской области.'),
+    ('153453344023', {
+        'page': '/rashodniki-i-aksessuary/', 'recid': '5414051801',
+        'name': 'Расходники и аксессуары в Балашове',
+        'description': 'Пильные цепи и шины, леска и триммерные головки, ножи для мотокос, масла, '
+                       'аккумуляторы и аксессуары. ' + TAIL,
     }),
 ])
 
-
-def subpart_url(uid):
-    return BASE + '?tfc_storepartnav%%5B%s%%5D=%s&tfc_div=:::' % (RECID, uid)
+SUBS = {
+    # Генераторы и резервное питание
+    '780518169663': ('Инверторные бензогенераторы в Балашове',
+                     'Инверторные бензогенераторы от 1 до 9,5 кВт с чистой синусоидой '
+                     'для чувствительной электроники. '),
+    '141015326003': ('Бензиновые генераторы в Балашове',
+                     'Бензиновые генераторы от 1,3 до 17 кВт, однофазные и трехфазные, '
+                     'с ручным и электрическим запуском. '),
+    '594805333963': ('Газовые и гибридные генераторы в Балашове',
+                     'Газовые генераторы на природном и сжиженном газе и гибридные газ-бензин '
+                     'от 5 до 17 кВт для дома и объектов. '),
+    '589327649303': ('Дизельные генераторы в Балашове',
+                     'Трехфазные дизельные генераторы от 6,8 до 8 кВт для дома и объектов. '),
+    '259723601923': ('Источники бесперебойного питания (ИБП) в Балашове',
+                     'ИБП от 300 до 1000 Вт для газовых котлов, насосов и домашней техники '
+                     'с внешними аккумуляторами. '),
+    # Садовая и уборочная техника
+    '983439229473': ('Пилы и высоторезы в Балашове',
+                     'Бензопилы и электропилы с шиной от 10 до 20 дюймов, бензиновые высоторезы '
+                     'для обрезки веток. '),
+    '635066744493': ('Мотокосы и триммеры в Балашове',
+                     'Бензиновые мотокосы и электротриммеры с шириной кошения от 32 до 43 см. '),
+    '763428092363': ('Газонокосилки в Балашове',
+                     'Бензиновые и электрические газонокосилки с шириной кошения от 32 до 56 см, '
+                     'самоходные и несамоходные. '),
+    '240937434233': ('Райдеры и садовые тракторы в Балашове',
+                     'Райдеры и садовые тракторы с шириной кошения от 61 до 122 см для больших участков. '),
+    '641267503533': ('Аэраторы и скарификаторы в Балашове',
+                     'Бензиновые и электрические аэраторы-скарификаторы для ухода за газоном. '),
+    '783995309283': ('Кусторезы и садовые ножницы в Балашове',
+                     'Бензиновые, электрические и аккумуляторные кусторезы и ножницы '
+                     'для живой изгороди и кустов. '),
+    '583206479823': ('Воздуходувки в Балашове',
+                     'Бензиновые и электрические воздуходувки, ранцевые и с функцией пылесоса, '
+                     'для уборки листьев. '),
+    '317202928353': ('Опрыскиватели, измельчители и мотобуры в Балашове',
+                     'Опрыскиватели, садовые измельчители, транспортеры и мотобур '
+                     'для работ на участке. '),
+    '274835118493': ('Уборочная техника в Балашове',
+                     'Подметальные машины, пылесосы, пылеводососы и мойка высокого давления '
+                     'для двора, гаража и мастерской. '),
+    # Расходники и аксессуары
+    '934216823253': ('Пильные цепи и шины в Балашове',
+                     'Цепи и шины для бензопил и электропил от 10 до 20 дюймов. '),
+    '520866779693': ('Триммерная леска и головки в Балашове',
+                     'Леска и триммерные головки для мотокос и электротриммеров. '),
+    '659545492733': ('Ножи и диски для мотокос в Балашове',
+                     'Двух-, трех- и четырехлопастные ножи и пильные диски для мотокос. '),
+    '477046503943': ('Масла для садовой техники в Балашове',
+                     'Масла для 2-тактных и 4-тактных двигателей и для смазки пильных цепей. '),
+    '531891449933': ('Аксессуары для генераторов в Балашове',
+                     'Аккумуляторы для электростартера, модуль параллельного подключения '
+                     'инверторных генераторов, подогреватель масляного фильтра. '),
+    '348797031923': ('Аксессуары для садовой техники в Балашове',
+                     'Шнеки для мотобура, травосборник для аэратора, комплект для сбора листьев. '),
+}
 
 
 def xml_escape(s):
-    return (s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+    return (str(s).replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
             .replace('"', '&quot;'))
 
 
+def clean(s):
+    """Значение из API Тильды -> простой текст: сущности раскрыты, пробелы схлопнуты."""
+    return re.sub(r'\s+', ' ', html.unescape(str(s or '')).replace('\xa0', ' ')).strip()
+
+
 def strip_html(text):
-    """HTML из описания Тильды -> простой текст: теги в пробелы, сущности раскрыты."""
-    import html as _html
     t = re.sub(r'<br\s*/?>|</p>|</div>|</li>', '\n', text or '', flags=re.I)
     t = re.sub(r'<[^>]+>', ' ', t)
-    t = _html.unescape(t)
+    t = html.unescape(t)
     t = re.sub(r'[ \t]+', ' ', t)
     t = re.sub(r'\s*\n\s*', '\n', t)
     return t.strip()
@@ -137,7 +197,6 @@ def short_text(text, limit=250):
     if len(t) <= limit:
         return t
     cut = t[:limit]
-    # сначала граница предложения (даже если получится коротко), потом запятая, потом слово
     for sep, minpos in (('. ', limit // 4), ('! ', limit // 4), ('; ', limit // 2), (', ', limit // 2), (' ', limit // 2)):
         i = cut.rfind(sep)
         if i > minpos:
@@ -145,15 +204,18 @@ def short_text(text, limit=250):
     return cut.rstrip()
 
 
-def fetch(url, binary=False, tries=3):
-    # Тильда и ее API изредка отвечают 403 на первый запрос — повторяем с паузой.
+def money(v):
+    return '%.2f' % float(v)
+
+
+def fetch(url, tries=3):
+    # Тильда и ее API изредка отвечают 403 / таймаутом — повторяем с паузой.
     last = None
     for i in range(tries):
         try:
             req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-            with urllib.request.urlopen(req, timeout=60) as r:
-                data = r.read()
-            return data if binary else data.decode('utf-8')
+            with urllib.request.urlopen(req, timeout=90) as r:
+                return r.read().decode('utf-8')
         except (urllib.error.HTTPError, urllib.error.URLError, OSError) as e:
             last = e
             time.sleep(5 * (i + 1))
@@ -161,340 +223,316 @@ def fetch(url, binary=False, tries=3):
 
 
 def head_ok(url):
-    req = urllib.request.Request(url, method='HEAD', headers={'User-Agent': 'Mozilla/5.0'})
+    req = urllib.request.Request(url, method='HEAD', headers={
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                      'Chrome/130.0 Safari/537.36'})
     try:
         with urllib.request.urlopen(req, timeout=60) as r:
             return r.status == 200
-    except Exception as e:  # noqa
+    except Exception:  # noqa
         return False
 
 
-def load_inputs(args):
-    if args.from_file:
-        feed = io.open(args.from_file, encoding='utf-8').read()
-    else:
-        feed = fetch(FEED_URL)
-    if args.parts_file:
-        parts = json.load(io.open(args.parts_file, encoding='utf-8'))
-    else:
-        parts = json.loads(fetch(PARTS_URL))
-    return feed, parts
+def load_catalog(api_file=None):
+    if api_file:
+        return json.load(io.open(api_file, encoding='utf-8'))
+    data, sl = None, 1
+    while True:
+        d = json.loads(fetch(API_URL % sl))
+        if data is None:
+            data = d
+        else:
+            data['products'] += d.get('products') or []
+        if not d.get('products') or len(data['products']) >= int(d.get('total') or 0) or not d.get('nextslice'):
+            break
+        sl += 1
+        time.sleep(1)
+    if len(data['products']) != int(data.get('total') or 0):
+        raise SystemExit('API отдало %d товаров из %s' % (len(data['products']), data.get('total')))
+    return data
 
 
-def build(feed, parts, target='direct'):
+def subpart_url(root, uid):
+    s = SECTIONS[root]
+    return SITE + s['page'] + '?tfc_storepartnav%%5B%s%%5D=%s&tfc_div=:::' % (s['recid'], uid)
+
+
+def model(data):
+    """Дерево разделов и офферы в общем виде. Возвращает (roots, subs, offers, warnings)."""
     warnings = []
-    direct = target == 'direct'
+    roots, subs = OrderedDict(), OrderedDict()   # uid -> title; sub uid -> (root uid, title)
+    for p in sorted(data.get('parts') or [], key=lambda p: int(p.get('sort') or 0)):
+        ru = str(p['uid'])
+        roots[ru] = clean(p['title'])
+        for s in sorted(p.get('subparts') or [], key=lambda s: int(s.get('sort') or 0)):
+            subs[str(s['uid'])] = (ru, clean(s['title']))
+    if not roots:
+        raise SystemExit('В ответе API нет разделов (getparts)')
+    for ru, t in roots.items():
+        if ru not in SECTIONS:
+            warnings.append('Раздел %s «%s» есть в Тильде, но нет в SECTIONS — в фиды не попадает' % (ru, t))
+    for su, (ru, t) in subs.items():
+        if su not in SUBS and ru in SECTIONS:
+            warnings.append('Подраздел %s «%s» без текста в SUBS — в Директе название по умолчанию' % (su, t))
+    for u in list(SECTIONS) + list(SUBS):
+        if u not in roots and u not in subs:
+            warnings.append('Раздел %s из настроек скрипта отсутствует в Тильде' % u)
 
-    # --- разделы Тильды ---------------------------------------------------
-    root_part = None
-    for p in parts.get('parts', []):
-        if str(p['uid']) == PARENT_UID:
-            root_part = p
-    if root_part is None:
-        raise SystemExit('В ответе API Тильды нет раздела %s' % PARENT_UID)
-    subparts = sorted(root_part.get('subparts', []), key=lambda s: s.get('sort', 0))
-    sub_by_uid = OrderedDict((str(s['uid']), s['title']) for s in subparts)
-    for uid in COLLECTIONS:
-        if uid != PARENT_UID and uid not in sub_by_uid:
-            warnings.append('Подраздел %s из COLLECTIONS отсутствует в Тильде' % uid)
-    for uid, title in sub_by_uid.items():
-        if uid not in COLLECTIONS:
-            warnings.append('В Тильде появился подраздел %s «%s» — нет текста в COLLECTIONS' % (uid, title))
-
-    # --- товар -> подраздел, первые фото -----------------------------------
-    prod_sub = {}
-    first_photo = {}
-    for pr in parts.get('products', []):
-        uid = str(pr['uid'])
-        try:
-            partuids = [str(x) for x in json.loads(pr.get('partuids') or '[]')]
-        except ValueError:
-            partuids = []
-        subs = [u for u in partuids if u in sub_by_uid]
-        if len(subs) > 1:
-            warnings.append('Товар %s «%s» сразу в нескольких подразделах: %s — берем первый'
-                            % (uid, pr.get('title'), ', '.join(subs)))
-        prod_sub[uid] = subs[0] if subs else None
-        try:
-            gallery = json.loads(pr.get('gallery') or '[]')
-        except ValueError:
-            gallery = []
-        if gallery:
-            first_photo[uid] = gallery[0]['img']
-
-    if target == 'business':
-        return build_business(feed, root_part, sub_by_uid, prod_sub, warnings)
-
-    # --- <categories> ----------------------------------------------------
-    cats = ['\t\t<categories>',
-            '\t\t\t<category id="%s">%s</category>' % (PARENT_UID, xml_escape(root_part['title']))]
-    for uid, title in sub_by_uid.items():
-        cats.append('\t\t\t<category id="%s" parentId="%s">%s</category>' % (uid, PARENT_UID, xml_escape(title)))
-    cats.append('\t\t</categories>')
-    feed, n = re.subn(r'[ \t]*<categories>.*?</categories>', '\n'.join(cats), feed, count=1, flags=re.S)
-    if n != 1:
-        raise SystemExit('В фиде не найден блок <categories>')
-
-    # --- офферы -----------------------------------------------------------
-    per_cat = defaultdict(int)
-    per_coll = defaultdict(int)
-    coll_offers = defaultdict(list)  # uid каталога -> offer id (для картинок)
-    seen = set()
-
-    def fix_offer(m):
-        oid, attrs, body = m.group(1), m.group(2), m.group(3)
-        seen.add(oid)
-        sub = prod_sub.get(oid)
-        if oid not in prod_sub:
-            warnings.append('Оффер %s есть в фиде, но не найден в API каталога — оставлен в родительской категории' % oid)
-        elif sub is None:
-            warnings.append('Оффер %s без подраздела — оставлен в родительской категории' % oid)
-        cat = sub or PARENT_UID
-        colls = ([sub] if sub else []) + [PARENT_UID]
-        cm = re.search(r'([ \t]*)<categoryId>[^<]*</categoryId>', body)
-        if not cm:
-            warnings.append('Оффер %s без <categoryId>' % oid)
-            return m.group(0)
-        ind = cm.group(1)
-        repl = '%s<categoryId>%s</categoryId>' % (ind, cat)
-        if direct:
-            for c in colls:
-                repl += '\n%s<collectionId>%s</collectionId>' % (ind, c)
-        body = body[:cm.start()] + repl + body[cm.end():]
-        if not direct:
-            # Яндекс Товары: manufacturer_warranty не рекомендован, available нужен для показа
-            body = re.sub(r'\n[ \t]*<manufacturer_warranty>[^<]*</manufacturer_warranty>', '', body)
-            if 'available=' not in attrs:
-                attrs += ' available="true"'
-        per_cat[cat] += 1
-        for c in colls:
-            per_coll[c] += 1
-            coll_offers[c].append(oid)
-        return '<offer id="%s"%s>%s</offer>' % (oid, attrs, body)
-
-    # <offer id="..." ...> ... </offer>; группа 2 — прочие атрибуты (available и т.п.)
-    feed = re.sub(r'<offer id="([^"]+)"([^>]*)>(.*?)</offer>', fix_offer, feed, flags=re.S)
-
-    for uid in prod_sub:
-        if uid not in seen:
-            warnings.append('Товар %s есть в API каталога, но нет в фиде' % uid)
-
-    # --- <collections> (только Директ) ------------------------------------
-    lines = ['\t\t<collections>']
-    for uid, c in COLLECTIONS.items():
-        url = c.get('url') or subpart_url(uid)
-        pics = []
-        if uid == PARENT_UID:
-            pics.append(PARENT_IMG)
-            # по одному фото из каждого подраздела
-            for s in sub_by_uid:
-                for oid in coll_offers.get(s, []):
-                    if oid in first_photo:
-                        pics.append(first_photo[oid])
-                        break
-        else:
-            for oid in coll_offers.get(uid, []):
-                if oid in first_photo:
-                    pics.append(first_photo[oid])
-                if len(pics) >= MAX_PICTURES:
-                    break
-        pics = pics[:MAX_PICTURES]
-        if not pics:
-            warnings.append('Каталог %s без картинок' % uid)
-        lines.append('\t\t\t<collection id="%s">' % uid)
-        lines.append('\t\t\t\t<url>%s</url>' % xml_escape(url))
-        for p in pics:
-            lines.append('\t\t\t\t<picture>%s</picture>' % xml_escape(p))
-        lines.append('\t\t\t\t<name>%s</name>' % xml_escape(c['name']))
-        if c.get('description'):
-            lines.append('\t\t\t\t<description>%s</description>' % xml_escape(c['description']))
-        lines.append('\t\t\t</collection>')
-    lines.append('\t\t</collections>')
-    if direct:
-        feed, n = re.subn(r'([ \t]*</offers>)', lambda m: m.group(1) + '\n' + '\n'.join(lines), feed, count=1)
-        if n != 1:
-            raise SystemExit('В фиде не найден </offers>')
-    else:
-        # дата сборки в формате RFC 3339 с поясом (Товары требуют файл не старше 10 дней)
-        tz = datetime.timezone(datetime.timedelta(hours=3))
-        now = datetime.datetime.now(tz).strftime('%Y-%m-%dT%H:%M:%S+03:00')
-        feed, n = re.subn(r'<yml_catalog date="[^"]*">', '<yml_catalog date="%s">' % now, feed, count=1)
-        if n != 1:
-            warnings.append('Не найден атрибут date у <yml_catalog>')
-
-    stats = {
-        'offers': len(seen),
-        'per_cat': per_cat,
-        'per_coll': per_coll,
-        'cat_titles': dict(sub_by_uid, **{PARENT_UID: root_part['title']}),
-    }
-    return feed, stats, warnings
+    offers = []
+    for pr in data['products']:
+        oid = str(pr['uid'])
+        pu = pr.get('partuids') or []
+        pu = [str(x).strip() for x in (pu.strip('[]').split(',') if isinstance(pu, str) else pu) if str(x).strip()]
+        my_subs = [u for u in pu if u in subs]
+        my_roots = [u for u in pu if u in roots] or [subs[u][0] for u in my_subs]
+        if len(my_subs) > 1:
+            warnings.append('Товар %s «%s» в нескольких подразделах — берем первый' % (oid, clean(pr['title'])))
+        sub = my_subs[0] if my_subs else None
+        root = subs[sub][0] if sub else (my_roots[0] if my_roots else None)
+        if root is None:
+            warnings.append('Товар %s «%s» без раздела — не попадает в фиды' % (oid, clean(pr['title'])))
+            continue
+        if root not in SECTIONS:
+            continue
+        if sub and root not in my_roots:
+            warnings.append('Товар %s только в подразделе, без раздела — на странице раздела его не видно' % oid)
+        gallery = json.loads(pr.get('gallery') or '[]')
+        price = float(pr.get('price') or 0)
+        old = float(pr.get('priceold') or 0)
+        x, y, z = (int(float(pr.get(k) or 0)) for k in ('pack_x', 'pack_y', 'pack_z'))
+        offers.append({
+            'id': oid, 'root': root, 'sub': sub, 'cat': sub or root,
+            'name': clean(pr['title']), 'vendor': clean(pr.get('brand')), 'sku': clean(pr.get('sku')),
+            'description': clean(pr.get('text')),
+            'pictures': [g['img'] for g in gallery if g.get('img')],
+            'url': pr.get('url') or '', 'price': price, 'oldprice': old if old > price else 0,
+            # габариты упаковки в Тильде — мм (pack_label lwh), в YML — см. Вес не выводим: у старых
+            # товаров в Тильде он записан в кг, а поле — в граммах (в YML Тильды было 0.125 кг у генератора).
+            'dimensions': '%g/%g/%g' % (x / 10, y / 10, z / 10) if x and y and z else '',
+            'params': [(clean(c['title']), clean(c['value'])) for c in pr.get('characteristics') or []],
+        })
+    return roots, subs, offers, warnings
 
 
-def build_business(feed, root_part, sub_by_uid, prod_sub, warnings):
-    """Фид для Яндекс Бизнеса: собирается заново из разобранного фида Тильды."""
-    src = ET.fromstring(feed.encode('utf-8'))
-    shop = src.find('shop')
-    per_cat = defaultdict(int)
-    used_cats = OrderedDict()
-    offers_xml = []
-    seen = set()
-    for o in shop.findall('offers/offer'):
-        oid = o.get('id')
-        seen.add(oid)
-        sub = prod_sub.get(oid)
-        if sub is None:
-            warnings.append('Оффер %s без подраздела — отнесен к «%s»' % (oid, root_part['title']))
-        cat = sub or PARENT_UID
-        used_cats[cat] = sub_by_uid.get(cat, root_part['title'])
-        per_cat[cat] += 1
-        name = (o.findtext('name') or '').strip()
-        vendor = (o.findtext('vendor') or '').strip()
-        if not vendor:
-            warnings.append('Оффер %s без vendor — для Бизнеса он обязателен' % oid)
-        price = (o.findtext('price') or '').strip()
-        if price.endswith('.00'):
-            price = price[:-3]
-        pics = [p.text.strip() for p in o.findall('picture') if p.text]
-        descr = strip_html(o.findtext('description') or '')
-        if re.search(r'https?://|www\.', descr) or re.search(r'\+?\d[\d\s()-]{9,}\d', descr):
-            warnings.append('Оффер %s: в описании ссылка или телефон — Бизнес такое не публикует' % oid)
-        descr = descr[:3000]
-        short = short_text(descr, 250)
-        lines = ['\t\t<offer id="%s">' % oid,
-                 '\t\t\t<name>%s</name>' % xml_escape(name[:250]),
-                 '\t\t\t<vendor>%s</vendor>' % xml_escape(vendor),
-                 '\t\t\t<price>%s</price>' % price,
-                 '\t\t\t<currencyId>RUB</currencyId>',
-                 '\t\t\t<categoryId>%s</categoryId>' % cat]
-        if pics:
-            lines.append('\t\t\t<picture>%s</picture>' % xml_escape(pics[0]))
-        else:
-            warnings.append('Оффер %s без картинки' % oid)
-        if descr:
-            lines.append('\t\t\t<description>%s</description>' % xml_escape(descr))
-            lines.append('\t\t\t<shortDescription>%s</shortDescription>' % xml_escape(short))
-        url = (o.findtext('url') or '').strip()
-        if url:
-            lines.append('\t\t\t<url>%s</url>' % xml_escape(url[:512]))
-        lines.append('\t\t</offer>')
-        offers_xml.append('\n'.join(lines))
-    for uid in prod_sub:
-        if uid not in seen:
-            warnings.append('Товар %s есть в API каталога, но нет в фиде' % uid)
+def collections_of(roots, subs, offers):
+    """Каталоги Директа: раздел и его подразделы, в которых есть офферы."""
+    by = defaultdict(list)
+    for o in offers:
+        by[o['root']].append(o)
+        if o['sub']:
+            by[o['sub']].append(o)
+    out = OrderedDict()
+    for ru in roots:
+        if ru not in SECTIONS or not by.get(ru):
+            continue
+        s = SECTIONS[ru]
+        pics = [s['picture']] if s.get('picture') else []
+        my_subs = [su for su, (r, _) in subs.items() if r == ru and by.get(su)]
+        for su in my_subs:   # по фото из каждого подраздела
+            pics.append(by[su][0]['pictures'][0])
+        for o in by[ru]:
+            if len(pics) >= MAX_PICTURES:
+                break
+            if o['pictures'] and o['pictures'][0] not in pics:
+                pics.append(o['pictures'][0])
+        out[ru] = {'url': SITE + s['page'], 'name': s['name'], 'description': s['description'],
+                   'pictures': pics[:MAX_PICTURES]}
+        for su in my_subs:
+            name, descr = SUBS.get(su, ('%s в Балашове' % subs[su][1], ''))
+            out[su] = {'url': subpart_url(ru, su), 'name': name,
+                       'description': (descr + TAIL) if descr else '',
+                       'pictures': [o['pictures'][0] for o in by[su] if o['pictures']][:MAX_PICTURES]}
+    return out
 
-    # категории — плоские, в порядке подразделов Тильды
-    ordered = [(u, t) for u, t in sub_by_uid.items() if u in used_cats]
-    if PARENT_UID in used_cats:
-        ordered.append((PARENT_UID, root_part['title']))
+
+def now_str():
     tz = datetime.timezone(datetime.timedelta(hours=3))
-    now = datetime.datetime.now(tz).strftime('%Y-%m-%dT%H:%M:%S+03:00')
+    return datetime.datetime.now(tz).strftime('%Y-%m-%dT%H:%M:%S+03:00')
+
+
+def build(data, target):
+    roots, subs, offers, warnings = model(data)
+    if target == 'direct' and DIRECT_ROOTS is not None:
+        offers = [o for o in offers if o['root'] in DIRECT_ROOTS]
+    used_roots = [r for r in roots if any(o['root'] == r for o in offers)]
+    used_subs = [s for s in subs if any(o['sub'] == s for o in offers)]
+    biz = target == 'business'
+    cur = 'RUB' if biz else 'RUR'
+
     out = ['<?xml version="1.0" encoding="UTF-8"?>',
-           '<yml_catalog date="%s">' % now,
+           '<yml_catalog date="%s">' % now_str(),
            '\t<shop>',
-           '\t\t<name>%s</name>' % xml_escape(shop.findtext('name') or ''),
-           '\t\t<company>%s</company>' % xml_escape(shop.findtext('company') or ''),
-           '\t\t<url>%s</url>' % xml_escape(shop.findtext('url') or ''),
+           '\t\t<name>%s</name>' % xml_escape(SHOP_NAME),
+           '\t\t<company>%s</company>' % xml_escape(COMPANY),
+           '\t\t<url>%s</url>' % SITE,
            '\t\t<currencies>',
-           '\t\t\t<currency id="RUB" rate="1"/>',
+           '\t\t\t<currency id="%s" rate="1"/>' % cur,
            '\t\t</currencies>',
            '\t\t<categories>']
-    for uid, title in ordered:
-        out.append('\t\t\t<category id="%s">%s</category>' % (uid, xml_escape(title)))
+    for ru in used_roots:
+        if not biz or ru in [o['cat'] for o in offers]:
+            out.append('\t\t\t<category id="%s">%s</category>' % (ru, xml_escape(roots[ru])))
+        for su in used_subs:
+            if subs[su][0] == ru:
+                par = '' if biz else ' parentId="%s"' % ru
+                out.append('\t\t\t<category id="%s"%s>%s</category>' % (su, par, xml_escape(subs[su][1])))
     out += ['\t\t</categories>', '\t\t<offers>']
-    out += offers_xml
-    out += ['\t\t</offers>', '\t</shop>', '</yml_catalog>', '']
-    stats = {
-        'offers': len(seen),
-        'per_cat': per_cat,
-        'per_coll': {},
-        'cat_titles': OrderedDict(ordered),
-    }
+
+    for o in offers:
+        if biz:
+            if not o['vendor']:
+                warnings.append('Оффер %s без vendor — для Бизнеса он обязателен' % o['id'])
+            descr = strip_html(o['description'])[:3000]
+            if re.search(r'https?://|www\.', descr) or re.search(r'\+?\d[\d\s()-]{9,}\d', descr):
+                warnings.append('Оффер %s: в описании ссылка или телефон — Бизнес такое не публикует' % o['id'])
+            lines = ['\t\t<offer id="%s">' % o['id'],
+                     '\t\t\t<name>%s</name>' % xml_escape(o['name'][:250]),
+                     '\t\t\t<vendor>%s</vendor>' % xml_escape(o['vendor']),
+                     '\t\t\t<price>%s</price>' % ('%g' % o['price'] if o['price'] == int(o['price']) else money(o['price'])),
+                     '\t\t\t<currencyId>RUB</currencyId>',
+                     '\t\t\t<categoryId>%s</categoryId>' % o['cat']]
+            if o['pictures']:
+                lines.append('\t\t\t<picture>%s</picture>' % xml_escape(o['pictures'][0]))
+            if descr:
+                lines.append('\t\t\t<description>%s</description>' % xml_escape(descr))
+                lines.append('\t\t\t<shortDescription>%s</shortDescription>' % xml_escape(short_text(descr)))
+            lines.append('\t\t\t<url>%s</url>' % xml_escape(o['url'][:512]))
+            lines.append('\t\t</offer>')
+            out += lines
+            continue
+        attrs = ' available="true"' if target == 'tovary' else ''
+        lines = ['\t\t<offer id="%s"%s>' % (o['id'], attrs),
+                 '\t\t\t<name>%s</name>' % xml_escape(o['name']),
+                 '\t\t\t<vendor>%s</vendor>' % xml_escape(o['vendor'])]
+        if o['sku']:
+            lines.append('\t\t\t<vendorCode>%s</vendorCode>' % xml_escape(o['sku']))
+        lines.append('\t\t\t<description>%s</description>' % xml_escape(o['description']))
+        lines += ['\t\t\t<picture>%s</picture>' % xml_escape(p) for p in o['pictures']]
+        lines += ['\t\t\t<url>%s</url>' % xml_escape(o['url']),
+                  '\t\t\t<price>%s</price>' % money(o['price'])]
+        if o['oldprice']:
+            lines.append('\t\t\t<oldprice>%s</oldprice>' % money(o['oldprice']))
+        lines += ['\t\t\t<currencyId>RUR</currencyId>',
+                  '\t\t\t<categoryId>%s</categoryId>' % o['cat']]
+        if target == 'direct':
+            lines += ['\t\t\t<collectionId>%s</collectionId>' % c for c in ([o['sub']] if o['sub'] else []) + [o['root']]]
+            lines.append('\t\t\t<manufacturer_warranty>true</manufacturer_warranty>')
+        lines += ['\t\t\t<delivery>true</delivery>', '\t\t\t<pickup>true</pickup>']
+        if o['dimensions']:
+            lines.append('\t\t\t<dimensions>%s</dimensions>' % o['dimensions'])
+        lines += ['\t\t\t<param name="%s">%s</param>' % (xml_escape(n), xml_escape(v)) for n, v in o['params']]
+        lines.append('\t\t</offer>')
+        out += lines
+    out.append('\t\t</offers>')
+
+    colls = OrderedDict()
+    if target == 'direct':
+        colls = collections_of(roots, subs, offers)
+        out.append('\t\t<collections>')
+        for cid, c in colls.items():
+            out.append('\t\t\t<collection id="%s">' % cid)
+            out.append('\t\t\t\t<url>%s</url>' % xml_escape(c['url']))
+            out += ['\t\t\t\t<picture>%s</picture>' % xml_escape(p) for p in c['pictures']]
+            out.append('\t\t\t\t<name>%s</name>' % xml_escape(c['name']))
+            if c['description']:
+                out.append('\t\t\t\t<description>%s</description>' % xml_escape(c['description']))
+            out.append('\t\t\t</collection>')
+        out.append('\t\t</collections>')
+    out += ['\t</shop>', '</yml_catalog>', '']
+
+    per_cat = defaultdict(int)
+    for o in offers:
+        per_cat[o['cat']] += 1
+    titles = OrderedDict()
+    for ru in used_roots:
+        titles[ru] = roots[ru]
+        for su in used_subs:
+            if subs[su][0] == ru:
+                titles[su] = '  ' + subs[su][1]
+    stats = {'offers': len(offers), 'per_cat': per_cat, 'titles': titles, 'colls': colls,
+             'expected': len([o for o in model(data)[2]]) if target != 'direct' or DIRECT_ROOTS is None
+             else len(offers)}
     return '\n'.join(out), stats, warnings
 
 
-def validate(text, check_urls=False, target='direct'):
-    """Структурная проверка результата. Возвращает список ошибок."""
+def validate(text, target, check_urls=False):
+    """Структурная проверка результата по требованиям площадки. Возвращает список ошибок."""
     errors = []
     try:
         root = ET.fromstring(text.encode('utf-8'))
     except ET.ParseError as e:
         return ['XML не парсится: %s' % e]
     shop = root.find('shop')
-    cat_ids = {c.get('id') for c in shop.findall('categories/category')}
-    for c in shop.findall('categories/category'):
+    cats = shop.findall('categories/category')
+    cat_ids = {c.get('id') for c in cats}
+    if len(cat_ids) != len(cats):
+        errors.append('Повторяются id категорий')
+    for c in cats:
         pid = c.get('parentId')
         if pid and pid not in cat_ids:
             errors.append('parentId %s категории %s не существует' % (pid, c.get('id')))
+        if pid and target == 'business':
+            errors.append('Категория %s с parentId — для Бизнеса категории плоские' % c.get('id'))
     colls = shop.findall('collections/collection')
     coll_ids = {c.get('id') for c in colls}
+    if target == 'direct' and not colls:
+        errors.append('Нет блока <collections>')
+    if target != 'direct' and colls:
+        errors.append('<collections> только для Директа')
     urls = []
     for c in colls:
         cid = c.get('id')
-        if c.find('url') is None or not (c.findtext('url') or '').strip():
-            errors.append('Каталог %s без url' % cid)
-        if not (c.findtext('name') or '').strip():
-            errors.append('Каталог %s без name' % cid)
-        pics = [p.text for p in c.findall('picture')]
-        if not pics:
-            errors.append('Каталог %s без picture' % cid)
+        for tag in ('url', 'name', 'picture'):
+            if not (c.findtext(tag) or '').strip():
+                errors.append('Каталог %s без %s' % (cid, tag))
+        if 'ё' in (c.findtext('name') or '') + (c.findtext('description') or ''):
+            errors.append('Каталог %s: буква ё' % cid)
         urls.append(c.findtext('url'))
-        urls.extend(pics)
-    if target == 'business':
-        # справка Яндекс Бизнеса: плоские категории, RUB, одна картинка, обязательный vendor
-        for c in shop.findall('categories/category'):
-            if c.get('parentId'):
-                errors.append('Категория %s с parentId — для Бизнеса категории плоские' % c.get('id'))
-        for o in shop.findall('offers/offer'):
-            oid = o.get('id')
-            for tag in ('name', 'vendor', 'price', 'currencyId', 'categoryId'):
-                if not (o.findtext(tag) or '').strip():
-                    errors.append('Оффер %s без %s' % (oid, tag))
+        urls += [p.text for p in c.findall('picture')]
+    ids = set()
+    used_cats = set()
+    for o in shop.findall('offers/offer'):
+        oid = o.get('id')
+        if oid in ids:
+            errors.append('Оффер %s повторяется' % oid)
+        ids.add(oid)
+        cid = o.findtext('categoryId')
+        used_cats.add(cid)
+        if cid not in cat_ids:
+            errors.append('Оффер %s: categoryId %s нет в <categories>' % (oid, cid))
+        price = o.findtext('price') or ''
+        if not re.fullmatch(r'[0-9]+(\.[0-9]+)?', price) or float(price) <= 0:
+            errors.append('Оффер %s: цена %r' % (oid, price))
+        old = o.findtext('oldprice')
+        if old and float(old) <= float(price or 0):
+            errors.append('Оффер %s: oldprice не больше price' % oid)
+        need = ('name', 'vendor', 'price', 'currencyId', 'categoryId', 'url', 'picture')
+        for tag in need + (('description',) if target != 'business' else ()):
+            if not (o.findtext(tag) or '').strip():
+                errors.append('Оффер %s без %s' % (oid, tag))
+        if not (o.findtext('url') or '').startswith(SITE + '/'):
+            errors.append('Оффер %s: url не на сайте' % oid)
+        cls = [x.text for x in o.findall('collectionId')]
+        if target == 'direct':
+            if not cls:
+                errors.append('Оффер %s без collectionId' % oid)
+            for x in cls:
+                if x not in coll_ids:
+                    errors.append('Оффер %s: collectionId %s нет в <collections>' % (oid, x))
+        elif cls:
+            errors.append('Оффер %s: collectionId только для Директа' % oid)
+        if target == 'business':
             if o.findtext('currencyId') != 'RUB':
                 errors.append('Оффер %s: валюта должна быть RUB' % oid)
-            if o.findtext('categoryId') not in cat_ids:
-                errors.append('Оффер %s: categoryId нет в <categories>' % oid)
             if len(o.findall('picture')) != 1:
                 errors.append('Оффер %s: должна быть ровно одна picture' % oid)
             if len(oid) > 80 or re.search(r'[^0-9A-Za-zА-Яа-я.,/\\()\[\]=-]', oid):
                 errors.append('Оффер %s: недопустимый id' % oid)
-            if len(o.findtext('name') or '') > 250:
-                errors.append('Оффер %s: название длиннее 250' % oid)
-            if len(o.findtext('description') or '') > 3000:
-                errors.append('Оффер %s: описание длиннее 3000' % oid)
-            if len(o.findtext('shortDescription') or '') > 250:
-                errors.append('Оффер %s: shortDescription длиннее 250' % oid)
-            if len(o.findtext('url') or '') > 512:
-                errors.append('Оффер %s: url длиннее 512' % oid)
-            if not re.fullmatch(r'[0-9]+([.,][0-9]+)?', o.findtext('price') or '') or float((o.findtext('price') or '0').replace(',', '.')) <= 0:
-                errors.append('Оффер %s: цена должна быть положительным числом' % oid)
-            if check_urls:
-                urls.append(o.findtext('picture'))
-        if check_urls:
-            for u in urls:
-                if not head_ok(u):
-                    errors.append('URL не отвечает 200: %s' % u)
-        return errors
-    if target == 'direct' and not colls:
-        errors.append('Нет блока <collections>')
-    if target == 'tovary' and shop.find('collections') is not None:
-        errors.append('В фиде для Товаров не должно быть <collections>')
-    for o in shop.findall('offers/offer'):
-        oid = o.get('id')
-        cid = o.findtext('categoryId')
-        if cid not in cat_ids:
-            errors.append('Оффер %s: categoryId %s нет в <categories>' % (oid, cid))
-        cls = [x.text for x in o.findall('collectionId')]
-        if target == 'direct' and not cls:
-            errors.append('Оффер %s без collectionId' % oid)
-        if target == 'tovary' and cls:
-            errors.append('Оффер %s: collectionId лишний для Товаров' % oid)
-        for x in cls:
-            if x not in coll_ids:
-                errors.append('Оффер %s: collectionId %s нет в <collections>' % (oid, x))
-        for tag in ('name', 'url', 'price', 'currencyId', 'picture', 'description'):
-            if not (o.findtext(tag) or '').strip():
-                errors.append('Оффер %s без %s' % (oid, tag))
+            for tag, n in (('name', 250), ('description', 3000), ('shortDescription', 250), ('url', 512)):
+                if len(o.findtext(tag) or '') > n:
+                    errors.append('Оффер %s: %s длиннее %d' % (oid, tag, n))
+            if re.search(r'<[a-z/]', o.findtext('description') or ''):
+                errors.append('Оффер %s: HTML в описании' % oid)
         if target == 'tovary':
             # требования Яндекс Товаров (справка merchants/ru: offers, attributes-offer, description)
             if o.get('available') != 'true':
@@ -504,33 +542,38 @@ def validate(text, check_urls=False, target='direct'):
             if len(oid) > 20 or re.search(r'[^0-9A-Za-zА-Яа-я.,/\\()\[\]=-]', oid):
                 errors.append('Оффер %s: недопустимый id для Товаров' % oid)
             plain = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', o.findtext('description') or '')).strip()
-            if len(plain) < 70:
-                errors.append('Оффер %s: описание короче 70 знаков (%d)' % (oid, len(plain)))
-            if len(plain) > 3000:
-                errors.append('Оффер %s: описание длиннее 3000 знаков (%d)' % (oid, len(plain)))
+            if not 70 <= len(plain) <= 3000:
+                errors.append('Оффер %s: описание %d знаков (нужно 70–3000)' % (oid, len(plain)))
             if len(o.findtext('name') or '') > 150:
                 errors.append('Оффер %s: название длиннее 150 знаков' % oid)
+        if check_urls:
+            urls.append(o.findtext('url'))
+            urls.append(o.findtext('picture'))
+    empty = cat_ids - used_cats - {c.get('parentId') for c in cats}
+    if empty:
+        errors.append('Категории без офферов: %s' % ', '.join(sorted(empty)))
     if check_urls:
-        for u in urls:
+        for u in OrderedDict.fromkeys(urls):
             if not head_ok(u):
                 errors.append('URL не отвечает 200: %s' % u)
     return errors
 
 
 def publish(out_paths):
-    """Копирует фиды в репозиторий feed-github и отправляет на GitHub."""
+    """Копирует фиды и скрипт в репозиторий feed-github и отправляет на GitHub."""
     for out_path in out_paths:
         shutil.copyfile(out_path, os.path.join(REPO_DIR, os.path.basename(out_path)))
     # копия скрипта в репозитории — ее запускает GitHub Actions раз в сутки
     shutil.copyfile(os.path.abspath(__file__), os.path.join(REPO_DIR, 'direct_feed.py'))
+
     def git(*a):
         return subprocess.run(['git', '-C', REPO_DIR] + list(a), capture_output=True, text=True)
-    st = git('status', '--porcelain')
-    if not st.stdout.strip():
+    files = [os.path.basename(p) for p in out_paths] + ['direct_feed.py']
+    if not git('status', '--porcelain', '--', *files).stdout.strip():
         print('Публикация: изменений нет, на GitHub уже актуальные файлы')
         return
-    git('add', '-A')
-    r = git('commit', '-m', 'Обновление фидов')
+    git('add', '--', *files)
+    r = git('commit', '-m', 'Обновление фидов', '--', *files)
     if r.returncode:
         print('git commit не удался:\n' + r.stdout + r.stderr)
         sys.exit(2)
@@ -544,46 +587,42 @@ def publish(out_paths):
 
 
 def main():
-    ap = argparse.ArgumentParser(description='Адаптация фида Тильды под Яндекс Директ и Яндекс Товары')
-    ap.add_argument('--target', choices=['direct', 'tovary', 'business', 'all'], default='all',
-                    help='какой фид собирать (по умолчанию все)')
-    ap.add_argument('--from-file', help='локальная копия фида Тильды вместо скачивания')
-    ap.add_argument('--parts-file', help='локальная копия ответа API Тильды (JSON)')
-    ap.add_argument('--out', help='куда писать результат (.yml или .xml); только при одном --target')
-    ap.add_argument('--out-dir', help='папка для результатов вместо «Яндекс Директ/feeds» (используется в GitHub Actions)')
-    ap.add_argument('--check-urls', action='store_true', help='проверить HEAD-запросом url и картинки каталогов')
+    ap = argparse.ArgumentParser(description='Фиды каталога для Яндекс Директа, Товаров и Бизнеса')
+    ap.add_argument('--target', choices=['direct', 'tovary', 'business', 'all'], default='all')
+    ap.add_argument('--api-file', '--parts-file', dest='api_file',
+                    help='локальная копия ответа API каталога (JSON) вместо запроса')
+    ap.add_argument('--out', help='куда писать результат; только при одном --target')
+    ap.add_argument('--out-dir', help='папка для результатов вместо «Яндекс Директ/feeds» (GitHub Actions)')
+    ap.add_argument('--check-urls', action='store_true', help='проверить HEAD-запросом url и картинки')
     ap.add_argument('--publish', action='store_true', help='скопировать в feed-github и сделать git commit + push')
     args = ap.parse_args()
 
     targets = list(OUT_FILES) if args.target == 'all' else [args.target]
     if args.out and len(targets) > 1:
         ap.error('--out работает только с одним --target')
-
     if args.out_dir:
         for t in OUT_FILES:
             OUT_FILES[t] = os.path.join(args.out_dir, os.path.basename(OUT_FILES[t]))
 
-    feed, parts = load_inputs(args)
-    written = []
-    failed = False
+    data = load_catalog(args.api_file)
+    written, failed = [], False
     for target in targets:
         out = args.out or OUT_FILES[target]
-        result, stats, warnings = build(feed, parts, target=target)
-        errors = validate(result, check_urls=args.check_urls, target=target)
-
-        os.makedirs(os.path.dirname(out), exist_ok=True)
+        result, stats, warnings = build(data, target)
+        errors = validate(result, target, check_urls=args.check_urls)
+        if stats['offers'] != stats['expected']:
+            errors.append('офферов %d, а товаров в разделах фида %d' % (stats['offers'], stats['expected']))
+        os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
         with io.open(out, 'w', encoding='utf-8', newline='\n') as f:
             f.write(result)
-
         print('=== %s: офферов %d' % (target, stats['offers']))
-        print('По категориям:')
-        for uid, title in stats['cat_titles'].items():
-            print('  %s  %-40s %d' % (uid, title, stats['per_cat'].get(uid, 0)))
-        if target == 'direct':
-            print('Каталоги (collections):')
-            for uid, c in COLLECTIONS.items():
-                print('  %s  %-52s %d товаров' % (uid, c['name'], stats['per_coll'].get(uid, 0)))
-        for w in warnings:
+        for uid, title in stats['titles'].items():
+            print('  %s  %-42s %d' % (uid, title, stats['per_cat'].get(uid, 0)))
+        if stats['colls']:
+            print('Каталоги (collections): %d' % len(stats['colls']))
+            for cid, c in stats['colls'].items():
+                print('  %s  %s' % (cid, c['name']))
+        for w in OrderedDict.fromkeys(warnings):
             print('ПРЕДУПРЕЖДЕНИЕ: ' + w)
         for e in errors:
             print('ОШИБКА: ' + e)
@@ -592,7 +631,6 @@ def main():
             failed = True
         else:
             written.append(out)
-
     if failed:
         sys.exit(1)
     if args.publish:
