@@ -560,14 +560,31 @@ def validate(text, target, check_urls=False):
 
 
 def publish(out_paths):
-    """Копирует фиды и скрипт в репозиторий feed-github и отправляет на GitHub."""
+    """Копирует фиды и скрипт в репозиторий feed-github и отправляет на GitHub.
+    Сначала подтягивает GitHub: Actions коммитит фиды каждый день, без этого push отклоняется
+    (так было 04.11.2026). Связь с github.com бывает нестабильной — сетевые шаги повторяются."""
+    def git(*a, timeout=None):
+        return subprocess.run(['git', '-C', REPO_DIR] + list(a), capture_output=True, text=True, timeout=timeout)
+
+    def net(*a):
+        r = None
+        for i in range(3):
+            try:
+                r = git(*a, timeout=120)
+            except subprocess.TimeoutExpired:
+                print('git %s: таймаут, попытка %d' % (a[0], i + 1))
+                continue
+            if not r.returncode:
+                return r
+            time.sleep(10)
+        print('git %s не удался:\n%s' % (' '.join(a), (r.stdout + r.stderr) if r else 'таймаут'))
+        sys.exit(2)
+
+    net('pull', '--rebase', '--autostash')
     for out_path in out_paths:
         shutil.copyfile(out_path, os.path.join(REPO_DIR, os.path.basename(out_path)))
     # копия скрипта в репозитории — ее запускает GitHub Actions раз в сутки
     shutil.copyfile(os.path.abspath(__file__), os.path.join(REPO_DIR, 'direct_feed.py'))
-
-    def git(*a):
-        return subprocess.run(['git', '-C', REPO_DIR] + list(a), capture_output=True, text=True)
     files = [os.path.basename(p) for p in out_paths] + ['direct_feed.py']
     if not git('status', '--porcelain', '--', *files).stdout.strip():
         print('Публикация: изменений нет, на GitHub уже актуальные файлы')
@@ -577,10 +594,7 @@ def publish(out_paths):
     if r.returncode:
         print('git commit не удался:\n' + r.stdout + r.stderr)
         sys.exit(2)
-    r = git('push')
-    if r.returncode:
-        print('git push не удался:\n' + r.stdout + r.stderr)
-        sys.exit(2)
+    net('push')
     for out_path in out_paths:
         print('Опубликовано: %s%s' % (PUBLIC_BASE, os.path.basename(out_path)))
     print('GitHub Pages обновится в течение минуты-двух')
