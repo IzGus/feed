@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<yml_catalog date="2026-11-04T11:42:09+03:00">
+<yml_catalog date="2026-11-05T06:05:07+03:00">
 	<shop>
 		<name>Электромонтажник</name>
 		<company>Электромонтажник</company>
@@ -1985,7 +1985,7 @@
 			<param name="Мощность двигателя">1 кВт / 1.3 л.с.</param>
 			<param name="Объем топливного бака">0.63 л</param>
 			<param name="Объем масла в двигателе">0.1 л</param>
-			<param name="Тип запуска">ручной</param>
+			<param name="Запуск">ручной</param>
 			<param name="Масса">7.6 кг</param>
 			<param name="Габариты (Д×Ш×В)">400×235×325 мм</param>
 			<param name="Гарантия">24 месяца</param>
@@ -2158,7 +2158,7 @@
 			<param name="Мощность двигателя">3.6 кВт / 4.9 л.с.</param>
 			<param name="Объем топливного бака">3.1 л</param>
 			<param name="Объем масла в двигателе">0.6 л</param>
-			<param name="Тип запуска">ручной</param>
+			<param name="Запуск">ручной</param>
 			<param name="Масса">23 кг</param>
 			<param name="Габариты (Д×Ш×В)">510×400×420 мм</param>
 			<param name="Гарантия">24 месяца</param>
@@ -2235,7 +2235,7 @@
 			<param name="Мощность двигателя">3.6 кВт / 4.9 л.с.</param>
 			<param name="Объем топливного бака">3.1 л</param>
 			<param name="Объем масла в двигателе">0.6 л</param>
-			<param name="Тип запуска">ручной</param>
+			<param name="Запуск">ручной</param>
 			<param name="Масса">24 кг</param>
 			<param name="Габариты (Д×Ш×В)">535×430×465 мм</param>
 			<param name="Гарантия">24 месяца</param>
@@ -2273,7 +2273,7 @@
 			<param name="Рабочий объем двигателя">163 см³</param>
 			<param name="Мощность двигателя">3.6 кВт / 4.9 л.с.</param>
 			<param name="Объем топливного бака">3.1 л</param>
-			<param name="Тип запуска">ручной</param>
+			<param name="Запуск">ручной</param>
 			<param name="Масса">24 кг</param>
 			<param name="Габариты (Д×Ш×В)">530×425×460 мм</param>
 			<param name="Гарантия">24 месяца</param>
@@ -2312,7 +2312,7 @@
 			<param name="Мощность двигателя">6.3 кВт / 8.6 л.с.</param>
 			<param name="Объем топливного бака">6 л</param>
 			<param name="Объем масла в двигателе">1.1 л</param>
-			<param name="Тип запуска">ручной</param>
+			<param name="Запуск">ручной</param>
 			<param name="Масса">44 кг</param>
 			<param name="Габариты (Д×Ш×В)">610×455×450 мм</param>
 			<param name="Гарантия">24 месяца</param>
@@ -2352,7 +2352,7 @@
 			<param name="Мощность двигателя">8.7 кВт / 11.8 л.с.</param>
 			<param name="Объем топливного бака">6.5 л</param>
 			<param name="Объем масла в двигателе">1.1 л</param>
-			<param name="Тип запуска">ручной</param>
+			<param name="Запуск">ручной</param>
 			<param name="Масса">52 кг</param>
 			<param name="Габариты (Д×Ш×В)">640×455×540 мм</param>
 			<param name="Гарантия">24 месяца</param>
@@ -2391,7 +2391,7 @@
 			<param name="Мощность двигателя">8.7 кВт / 11.8 л.с.</param>
 			<param name="Объем топливного бака">6.5 л</param>
 			<param name="Объем масла в двигателе">1.1 л</param>
-			<param name="Тип запуска">ручной</param>
+			<param name="Запуск">ручной</param>
 			<param name="Масса">68 кг</param>
 			<param name="Габариты (Д×Ш×В)">807×579×647 мм</param>
 			<param name="Гарантия">24 месяца</param>
@@ -2431,7 +2431,7 @@
 			<param name="Мощность двигателя">4.3 кВт / 5.8 л.с.</param>
 			<param name="Объем топливного бака">3.1 л</param>
 			<param name="Объем масла в двигателе">0.6 л</param>
-			<param name="Тип запуска">ручной</param>
+			<param name="Запуск">ручной</param>
 			<param name="Масса">24 кг</param>
 			<param name="Габариты (Д×Ш×В)">535×430×465 мм</param>
 			<param name="Гарантия">24 месяца</param>
@@ -2470,7 +2470,7 @@
 			<param name="Мощность двигателя">4.3 кВт / 5.8 л.с.</param>
 			<param name="Объем топливного бака">3.1 л</param>
 			<param name="Объем масла в двигателе">0.6 л</param>
-			<param name="Тип запуска">ручной</param>
+			<param name="Запуск">ручной</param>
 			<param name="Масса">35 кг</param>
 			<param name="Габариты (Д×Ш×В)">552×432×442 мм</param>
 			<param name="Гарантия">24 месяца</param>
@@ -2508,7 +2508,7 @@
 			<param name="Мощность двигателя">8.7 кВт / 11.8 л.с.</param>
 			<param name="Объем топливного бака">6.5 л</param>
 			<param name="Объем масла в двигателе">1.1 л</param>
-			<param name="Тип запуска">ручной</param>
+			<param name="Запуск">ручной</param>
 			<param name="Расход топлива">3.21 л/ч</param>
 			<param name="Масса">47 кг</param>
 			<param name="Габариты (Д×Ш×В)">640×635×555 мм</param>
@@ -2547,7 +2547,7 @@
 			<param name="Мощность двигателя">4.1 кВт / 5.6 л.с.</param>
 			<param name="Объем топливного бака">3.3 л</param>
 			<param name="Объем масла в двигателе">0.6 л</param>
-			<param name="Тип запуска">ручной</param>
+			<param name="Запуск">ручной</param>
 			<param name="Масса">26 кг</param>
 			<param name="Габариты (Д×Ш×В)">515×435×470 мм</param>
 			<param name="Гарантия">24 месяца</param>
@@ -2580,7 +2580,7 @@
 			<param name="Мощность двигателя">4.3 кВт / 5.8 л.с.</param>
 			<param name="Объем топливного бака">3.1 л</param>
 			<param name="Объем масла в двигателе">0.6 л</param>
-			<param name="Тип запуска">ручной</param>
+			<param name="Запуск">ручной</param>
 			<param name="Масса">26 кг</param>
 			<param name="Габариты (Д×Ш×В)">515×435×470 мм</param>
 			<param name="Гарантия">24 месяца</param>
@@ -2619,7 +2619,7 @@
 			<param name="Мощность двигателя">4.3 кВт / 5.8 л.с.</param>
 			<param name="Объем топливного бака">3.1 л</param>
 			<param name="Объем масла в двигателе">0.6 л</param>
-			<param name="Тип запуска">ручной</param>
+			<param name="Запуск">ручной</param>
 			<param name="Масса">28 кг</param>
 			<param name="Габариты (Д×Ш×В)">510×400×420 мм</param>
 			<param name="Гарантия">24 месяца</param>
@@ -5220,7 +5220,7 @@
 			<param name="Коэффициент мощности (cos φ)">1</param>
 			<param name="Тип топлива">бензин</param>
 			<param name="Количество фаз">1</param>
-			<param name="Тип запуска">электростартер</param>
+			<param name="Тип запуска">ручной / электростартер</param>
 			<param name="Исполнение">открытое</param>
 			<param name="Регулятор напряжения">инверторный</param>
 			<param name="Розетки">2 розетки (16 А), 1 розетка (32 А)</param>
@@ -12582,7 +12582,7 @@
 			<delivery>true</delivery>
 			<pickup>true</pickup>
 			<param name="Тип питания">электрический</param>
-			<param name="Назначение">для сухих загрязнений, для очистки каминов, печей, мангалов и барбекю от золы и других продуктов горения</param>
+			<param name="Назначение">уборка золы</param>
 			<param name="Объем бака для мусора">20 л</param>
 			<param name="Мощность двигателя">1.2 кВт</param>
 			<param name="Гарантия">24 месяца</param>
@@ -12610,7 +12610,7 @@
 			<delivery>true</delivery>
 			<pickup>true</pickup>
 			<param name="Тип питания">электрический</param>
-			<param name="Назначение">для сухой чистки</param>
+			<param name="Назначение">сухая уборка</param>
 			<param name="Объем бака для мусора">15 л</param>
 			<param name="Мощность двигателя">1 кВт</param>
 			<param name="Гарантия">24 месяца</param>
@@ -12638,7 +12638,7 @@
 			<delivery>true</delivery>
 			<pickup>true</pickup>
 			<param name="Тип питания">электрический</param>
-			<param name="Назначение">для влажных и сухих загрязнений</param>
+			<param name="Назначение">влажная и сухая уборка</param>
 			<param name="Объем бака для мусора">20 л</param>
 			<param name="Мощность двигателя">1.4 кВт</param>
 			<param name="Гарантия">24 месяца</param>
@@ -12666,7 +12666,7 @@
 			<delivery>true</delivery>
 			<pickup>true</pickup>
 			<param name="Тип питания">электрический</param>
-			<param name="Назначение">для влажных и сухих загрязнений</param>
+			<param name="Назначение">влажная и сухая уборка</param>
 			<param name="Объем бака для мусора">30 л</param>
 			<param name="Мощность двигателя">1.4 кВт</param>
 			<param name="Гарантия">24 месяца</param>
@@ -12694,7 +12694,7 @@
 			<delivery>true</delivery>
 			<pickup>true</pickup>
 			<param name="Тип питания">электрический</param>
-			<param name="Назначение">для влажных и сухих загрязнений</param>
+			<param name="Назначение">влажная и сухая уборка</param>
 			<param name="Объем бака для мусора">30 л</param>
 			<param name="Мощность двигателя">1.4 кВт</param>
 			<param name="Гарантия">24 месяца</param>
@@ -12722,7 +12722,7 @@
 			<delivery>true</delivery>
 			<pickup>true</pickup>
 			<param name="Тип питания">электрический</param>
-			<param name="Назначение">для влажных и сухих загрязнений</param>
+			<param name="Назначение">влажная и сухая уборка</param>
 			<param name="Объем бака для мусора">40 л</param>
 			<param name="Мощность двигателя">1.6 кВт</param>
 			<param name="Гарантия">24 месяца</param>
@@ -12750,7 +12750,7 @@
 			<delivery>true</delivery>
 			<pickup>true</pickup>
 			<param name="Тип питания">электрический</param>
-			<param name="Назначение">для влажных и сухих загрязнений</param>
+			<param name="Назначение">влажная и сухая уборка</param>
 			<param name="Объем бака для мусора">40 л</param>
 			<param name="Мощность двигателя">1.6 кВт</param>
 			<param name="Гарантия">24 месяца</param>
@@ -13676,7 +13676,7 @@
 			<param name="Ступени очистки">одноступенчатый</param>
 			<param name="Самоходный">нет</param>
 			<param name="Дальность выброса">6 м</param>
-			<param name="Производительность">181 кг/мин</param>
+			<param name="Производительность по снегу">181 кг/мин</param>
 			<param name="Мощность двигателя">1.2 кВт / 1.6 л.с.</param>
 			<param name="Напряжение">220 В</param>
 			<param name="Масса">6.3 кг</param>
@@ -13711,7 +13711,7 @@
 			<param name="Тип передвижения">колеса</param>
 			<param name="Самоходный">нет</param>
 			<param name="Дальность выброса">6 м</param>
-			<param name="Производительность">250 кг/мин</param>
+			<param name="Производительность по снегу">250 кг/мин</param>
 			<param name="Мощность двигателя">2 кВт / 2.7 л.с.</param>
 			<param name="Фара">да</param>
 			<param name="Напряжение">220 В</param>
